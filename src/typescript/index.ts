@@ -37,7 +37,20 @@ let translations: Translations = {};
 //as the page loads
 document.addEventListener("DOMContentLoaded", () => {
   setLocale(defaultLocale);
+  bindLocaleSwitcher(defaultLocale);
 });
+
+//allows user to select their language preference
+function bindLocaleSwitcher(initialValue:string){
+  const switcher:HTMLSelectElement|null = document.querySelector("[data-i18n-switcher]");
+  if(!switcher) return;
+  switcher.value = initialValue;
+  switcher.onchange = (e: Event) => {
+    //typescript can't infer the e.target type without an extra step
+    const target = e.target as HTMLSelectElement;
+    setLocale(target.value)
+  }
+}
 
 //on locale change, new translations are fetched, applied, and html lang updated
 async function setLocale(newLocale: string) {
