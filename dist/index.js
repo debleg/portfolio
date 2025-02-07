@@ -66,7 +66,7 @@ function setLocale(newLocale) {
 //translations are retrieved from the corresponding json file
 function fetchTranslationsFor(newLocale) {
     return __awaiter(this, void 0, void 0, function* () {
-        const response = yield fetch(`/src/lang/${newLocale}.json`);
+        const response = yield fetch(`/lang/${newLocale}.json`);
         return yield response.json();
     });
 }

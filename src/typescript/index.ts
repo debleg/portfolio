@@ -64,7 +64,7 @@ async function setLocale(newLocale: string) {
 
 //translations are retrieved from the corresponding json file
 async function fetchTranslationsFor(newLocale: string): Promise<Translations> {
-  const response = await fetch(`/src/lang/${newLocale}.json`);
+  const response = await fetch(`/lang/${newLocale}.json`);
   return await response.json();
 }
 
