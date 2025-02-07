@@ -38,6 +38,7 @@ let translations = {};
 document.addEventListener("DOMContentLoaded", () => {
     setLocale(defaultLocale);
 });
+//on locale change, new translations are fetched, applied, and html lang updated
 function setLocale(newLocale) {
     return __awaiter(this, void 0, void 0, function* () {
         if (newLocale === locale)
@@ -46,6 +47,7 @@ function setLocale(newLocale) {
         locale = newLocale;
         translations = newTranslations;
         translatePage();
+        updateHtmlLang(newLocale);
     });
 }
 //translations are retrieved from the corresponding json file
@@ -55,11 +57,13 @@ function fetchTranslationsFor(newLocale) {
         return yield response.json();
     });
 }
+//all translatable elements with the right key are replaced
 function translatePage() {
     document
         .querySelectorAll("[data-i18n-key]")
         .forEach(translateElement);
 }
+//elements are only replaced if both the key and the corresponding translation exist
 function translateElement(element) {
     const key = element.getAttribute("data-i18n-key");
     if (key === null)
@@ -71,5 +75,9 @@ function translateElement(element) {
     else {
         console.warn(`Translation missing for key: ${key}"`);
     }
+}
+//updates the lang attribute to new locale when called
+function updateHtmlLang(newLocale) {
+    document.documentElement.setAttribute('lang', newLocale);
 }
 //# sourceMappingURL=index.js.map

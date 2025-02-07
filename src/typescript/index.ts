@@ -39,23 +39,30 @@ document.addEventListener("DOMContentLoaded", () => {
   setLocale(defaultLocale);
 });
 
+//on locale change, new translations are fetched, applied, and html lang updated
 async function setLocale(newLocale: string) {
   if (newLocale === locale) return;
   const newTranslations = await fetchTranslationsFor(newLocale);
   locale = newLocale;
   translations = newTranslations;
   translatePage();
+  updateHtmlLang(newLocale);
 }
+
 //translations are retrieved from the corresponding json file
 async function fetchTranslationsFor(newLocale: string): Promise<Translations> {
   const response = await fetch(`../src/lang/${newLocale}.json`);
   return await response.json();
 }
+
+//all translatable elements with the right key are replaced
 function translatePage() {
   document
     .querySelectorAll<HTMLElement>("[data-i18n-key]")
     .forEach(translateElement);
 }
+
+//elements are only replaced if both the key and the corresponding translation exist
 function translateElement(element: HTMLElement) {
   const key: string | null = element.getAttribute("data-i18n-key");
   if (key === null) return;
@@ -66,4 +73,9 @@ function translateElement(element: HTMLElement) {
   } else {
     console.warn(`Translation missing for key: ${key}"`);
   }
+}
+
+//updates the lang attribute to new locale when called
+function updateHtmlLang(newLocale: string) {
+  document.documentElement.setAttribute('lang', newLocale);
 }
