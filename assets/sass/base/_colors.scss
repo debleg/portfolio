@@ -3,14 +3,14 @@
     --text: hsl(44, 100%, 15%);
     --background: hsl(87, 44%, 88%);
     --primary: hsl(53, 100%, 95%);
-    --texture: url("./../../src/cartographer-background-light.png"); // from https://www.transparenttextures.com/
+    --texture: url("./../src/cartographer-background-light.png"); // from https://www.transparenttextures.com/
 }
 
 .dark {
     --text: hsl(44, 100%, 85%);
     --background: hsl(87, 44%, 12%);
     --primary: hsl(53, 100%, 5%);
-    --texture: url("./../../src/cartographer-background-dark.png");
+    --texture: url("./../src/cartographer-background-dark.png");
 }
 
 body {
