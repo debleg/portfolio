@@ -1,0 +1,44 @@
+// Responsive mixin
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet-min {
+    @media screen and (min-width: 768px) {
+      @content;
+      $header-height: 40px;
+      $footer-height: 40px;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+//layout-specific variables
+$header-height: 50px;
+$footer-height: 50px;
+
+$header-height-tablet: 60px;
+$footer-height-tablet: 60px;
+
+$header-height-desktop: 70px;
+$footer-height-desktop: 70px;
+
+// General Layout
+body {
+  min-width: 320px;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+  //sticks the footer to the bottom if the content isn't enough to push it down
+  min-height: calc(100vh - ($header-height + $footer-height));
+  @include responsive(tablet-min) {
+    min-height: calc(100vh - ($header-height-tablet + $footer-height-tablet));
+  }
+  @include responsive(desktop) {
+    min-height: calc(100vh - ($header-height-desktop + $footer-height-desktop));
+  }
+}
