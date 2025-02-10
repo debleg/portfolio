@@ -1,24 +1,59 @@
 //Theme handling based on toggle switch
-const themeToggle = document.getElementById(
+const themeToggleInput = document.getElementById(
   "theme-toggle"
+) as HTMLInputElement | null;
+const lightLabel = document.querySelector(
+  ".to-light-theme"
+) as HTMLElement | null;
+const darkLabel = document.querySelector(
+  ".to-dark-theme"
 ) as HTMLElement | null;
 const body = document.body;
 
-//If theme preference is stored, apply on reload
-const theme = localStorage.getItem("theme");
-if (theme) {
-  body.classList.add(theme);
-}
+//If theme preference is stored, apply on reload, else light by default
 
-//on click the class is changed and the user choice saved in local storage
-themeToggle?.addEventListener("click", () => {
+function applyTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme == "light") {
+    body.classList.add("light");
+    themeToggleInput!.checked = false;
+  }
+  if (theme == "dark") {
+    body.classList.add("dark");
+    themeToggleInput!.checked = true;
+  } else {
+    body.classList.add("light");
+    localStorage.setItem("theme", "light");
+  }
+}
+applyTheme();
+
+//the class is changed,the user choice saved in local storage, the input check saved
+function toggleTheme() {
   if (body.classList.contains("light")) {
     body.classList.replace("light", "dark");
+    themeToggleInput!.checked = true;
     localStorage.setItem("theme", "dark");
   } else {
     body.classList.replace("dark", "light");
+    themeToggleInput!.checked = false;
     localStorage.setItem("theme", "light");
   }
+}
+
+//due to visually hidden and tab index -1 the checkbox itself can't be used as target, the labels are what the user interacts with instead
+[lightLabel, darkLabel].forEach((label) => {
+  label?.addEventListener("click", () => {
+    toggleTheme();
+  });
+
+  //for keyboard accessibility
+  label?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault(); //no scroll on space bar press
+      toggleTheme();
+    }
+  });
 });
 
 //I18n setup
@@ -33,7 +68,7 @@ if (!storedLocale) {
   defaultLocale = "fr";
 } else {
   defaultLocale = storedLocale;
-};
+}
 
 //the language the site will be translated to
 let locale: string;
@@ -51,9 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //allows user to select their language preference
-function bindLocaleSwitcher(initialValue:string){
-  const switcher:HTMLSelectElement|null = document.querySelector("[data-i18n-switcher]");
-  if(!switcher) return;
+function bindLocaleSwitcher(initialValue: string) {
+  const switcher: HTMLSelectElement | null = document.querySelector(
+    "[data-i18n-switcher]"
+  );
+  if (!switcher) return;
   switcher.value = initialValue;
   switcher.onchange = (e: Event) => {
     //typescript can't infer the e.target type without an extra step
@@ -61,7 +98,7 @@ function bindLocaleSwitcher(initialValue:string){
     setLocale(target.value);
     localStorage.setItem("lang", target.value);
     storedLocale = target.value;
-  }
+  };
 }
 
 //on locale change, new translations are fetched, applied, and html lang updated
@@ -102,5 +139,5 @@ function translateElement(element: HTMLElement) {
 
 //updates the lang attribute to new locale when called
 function updateHtmlLang(newLocale: string) {
-  document.documentElement.setAttribute('lang', newLocale);
+  document.documentElement.setAttribute("lang", newLocale);
 }

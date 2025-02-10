@@ -14,10 +14,12 @@
     <!--Style-->
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
-  <body class="light">
+  <body>
     <header>
-      <input type="checkbox" id="theme-toggle" />
-      <label for="checkbox" data-i18n-key="theme-toggle"></label>
+      <input type="checkbox" id="theme-toggle" class="visually-hidden" tabindex="-1" />
+      <label for="theme-toggle" tabindex="0" class="to-light-theme"aria-label="Change theme"><i data-lucide="sprout"></i></label>
+      <label for="theme-toggle" tabindex="0" class="to-dark-theme" aria-label="Change theme"><i data-lucide="tree-deciduous"></i></label>
+
     </header>
     <main>
       <select data-i18n-switcher class="locale-switcher">
