@@ -1,3 +1,8 @@
 {
-  "theme-toggle": "Change theme"
+  "theme-toggle": "Change theme",
+  "about": "Discover",
+  "projects": "Projects",
+  "tech": "Technical skills",
+  "perso": "Personal skills",
+  "contact": "Contact"
 }

@@ -5,19 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DebLeg - Portfolio</title>
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!--Style-->
-<link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Style-->
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body class="light">
-    <input type="checkbox" id="theme-toggle">Click!</input>
-    <label for="checkbox" data-i18n-key="theme-toggle">Change theme</label>
-    <select data-i18n-switcher class="locale-switcher">
-      <option value="en">English</option>
-      <option value="fr">Français</option>
-    </select>
+    <header>
+      <input type="checkbox" id="theme-toggle" />
+      <label for="checkbox" data-i18n-key="theme-toggle">Change theme</label>
+    </header>
+    <main>
+      <select data-i18n-switcher class="locale-switcher">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+      <h1></h1>
+      <section id="about">
+        <h2><i></i><span data-i18n-key="about">Découverte</span></h2>
+      </section>
+      <section id="projects">
+        <h2><i></i><span data-i18n-key="projects">Projets</span></h2>
+      </section>
+
+      <section id="tech">
+        <h2><i></i><span data-i18n-key="tech">Compétences techniques</span></h2>
+      </section>
+
+      <section id="perso">
+        <h2>
+          <i></i><span data-i18n-key="perso">Compétences personnelles</span>
+        </h2>
+      </section>
+
+      <section id="contact">
+        <h2><i></i><span data-i18n-key="contact">Contact</span></h2>
+      </section>
+    </main>
+    <footer>
+      
+    </footer>
     <!--The following lines allow the use of Lucide icons, using data-lucide as attribute for the desired icon-->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>

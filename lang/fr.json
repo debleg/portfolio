@@ -1,3 +1,8 @@
 {
-  "theme-toggle": "Changer le thème"
+  "theme-toggle": "Changer le thème",
+  "about": "Découverte",
+  "projects": "Projets",
+  "tech": "Compétences techniques",
+  "perso": "Compétences personnelles",
+  "contact": "Contact"
 }
