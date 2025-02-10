@@ -29,7 +29,17 @@ themeToggle === null || themeToggle === void 0 ? void 0 : themeToggle.addEventLi
 });
 //I18n setup
 //the default language, French for now
-const defaultLocale = "fr";
+let defaultLocale;
+//the language stored in local storage if the visitor has already changed it
+let storedLocale = localStorage.getItem("lang");
+//default changed to stored if stored exists
+if (!storedLocale) {
+    defaultLocale = "fr";
+}
+else {
+    defaultLocale = storedLocale;
+}
+;
 //the language the site will be translated to
 let locale;
 //the translations relocated to json files
@@ -49,6 +59,8 @@ function bindLocaleSwitcher(initialValue) {
         //typescript can't infer the e.target type without an extra step
         const target = e.target;
         setLocale(target.value);
+        localStorage.setItem("lang", target.value);
+        storedLocale = target.value;
     };
 }
 //on locale change, new translations are fetched, applied, and html lang updated

@@ -24,7 +24,17 @@ themeToggle?.addEventListener("click", () => {
 //I18n setup
 
 //the default language, French for now
-const defaultLocale: string = "fr";
+let defaultLocale: string;
+//the language stored in local storage if the visitor has already changed it
+let storedLocale: string | null = localStorage.getItem("lang");
+
+//default changed to stored if stored exists
+if (!storedLocale) {
+  defaultLocale = "fr";
+} else {
+  defaultLocale = storedLocale;
+};
+
 //the language the site will be translated to
 let locale: string;
 
@@ -48,7 +58,9 @@ function bindLocaleSwitcher(initialValue:string){
   switcher.onchange = (e: Event) => {
     //typescript can't infer the e.target type without an extra step
     const target = e.target as HTMLSelectElement;
-    setLocale(target.value)
+    setLocale(target.value);
+    localStorage.setItem("lang", target.value);
+    storedLocale = target.value;
   }
 }
 
