@@ -4,7 +4,6 @@
     --background: hsl(87, 44%, 88%);
     --primary: hsl(53, 100%, 95%);
     --logo-background: var(--background);
-    --texture: url("./../src/cartographer-background-light.png"); // from https://www.transparenttextures.com/
     .to-light-theme {
       display: none;
     }
@@ -19,7 +18,6 @@
     --background: hsl(87, 44%, 12%);
     --primary: hsl(53, 100%, 5%);
     --logo-background: var(--text);
-    --texture: url("./../src/cartographer-background-dark.png");
     .to-dark-theme {
       display: none;
     }
@@ -31,7 +29,6 @@
 
 body {
   background-color: var(--background);
-  background-image: var(--texture);
   color: var(--text);
 }
 
