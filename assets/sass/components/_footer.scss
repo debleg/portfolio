@@ -1,0 +1,58 @@
+@use "./../base" as *;
+
+.light .footer {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
+}
+
+.dark .footer {
+  background: #202c1133;
+  box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
+  //flat version:
+  //background: rgba(0,0,0,.3);
+  //box-shadow: rgba(255,255,255, .1) 0 1px 0, rgba(0,0,0,.2) 0 1px 7px 0px inset;
+}
+
+.footer {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $footer-height;
+  border-radius: 30px;
+
+  @include responsive(tablet-min) {
+    height: $footer-height-tablet;
+  }
+  @include responsive(desktop) {
+    height: $footer-height-desktop;
+  }
+  &__copyright {
+    font-weight: $fw-3;
+    font-size: 1.125rem;
+    padding-top: 0.1em;
+    @include responsive(tablet-min) {
+      font-size: 1.3rem;
+    }
+    @include responsive(desktop) {
+      font-size: 1.4rem;
+    }
+  }
+  &__connect {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.3em;
+    @include responsive(tablet-min) {
+      gap: 1em;
+    }
+    @include responsive(desktop) {
+      gap: 2em;
+    }
+    &--icon:hover {
+      transform: scale(1.2);
+    }
+  }
+}

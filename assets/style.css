@@ -143,4 +143,69 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.light .footer {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
+}
+
+.dark .footer {
+  background: rgba(32, 44, 17, 0.2);
+  box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
+}
+
+.footer {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-radius: 30px;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    height: 70px;
+  }
+}
+.footer__copyright {
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding-top: 0.1em;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    font-size: 1.4rem;
+  }
+}
+.footer__connect {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.3em;
+}
+@media screen and (min-width: 768px) {
+  .footer__connect {
+    gap: 1em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__connect {
+    gap: 2em;
+  }
+}
+.footer__connect--icon:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
