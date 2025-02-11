@@ -34,11 +34,11 @@ main {
   max-width: 1440px;
   margin: auto;
   //sticks the footer to the bottom if the content isn't enough to push it down
-  min-height: calc(100vh - ($header-height + $footer-height + 4em));
+  min-height: calc(100vh - ($header-height + $footer-height + 2em));
   @include responsive(tablet-min) {
-    min-height: calc(100vh - ($header-height-tablet + $footer-height-tablet + 4em));
+    min-height: calc(100vh - ($header-height-tablet + $footer-height-tablet + 2em));
   }
   @include responsive(desktop) {
-    min-height: calc(100vh - ($header-height-desktop + $footer-height-desktop + 4em));
+    min-height: calc(100vh - ($header-height-desktop + $footer-height-desktop + 2em));
   }
 }

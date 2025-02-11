@@ -81,16 +81,16 @@ body {
 main {
   max-width: 1440px;
   margin: auto;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - (100px + 2em));
 }
 @media screen and (min-width: 768px) {
   main {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - (120px + 2em));
   }
 }
 @media screen and (min-width: 1280px) {
   main {
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - (140px + 2em));
   }
 }
 
@@ -107,6 +107,7 @@ body {
   --text: hsl(44, 100%, 15%);
   --background: hsl(87, 44%, 88%);
   --primary: hsl(53, 100%, 95%);
+  --logo-background: var(--background);
   --texture: url("./../src/cartographer-background-light.png");
 }
 .light .to-light-theme {
@@ -121,6 +122,7 @@ body {
   --text: hsl(44, 100%, 85%);
   --background: hsl(87, 44%, 12%);
   --primary: hsl(53, 100%, 5%);
+  --logo-background: var(--text);
   --texture: url("./../src/cartographer-background-dark.png");
 }
 .dark .to-dark-theme {
@@ -151,6 +153,87 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.header {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-radius: 30px;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    height: 70px;
+  }
+}
+.header__logo {
+  height: 40px;
+  width: auto;
+  background: radial-gradient(var(--logo-background) 20%, transparent 70%);
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    height: 60px;
+  }
+}
+.header__interact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.header__menu--button {
+  background: var(--background);
+  border-radius: 10px;
+  color: inherit;
+  border: none;
+}
+.header__menu--icon {
+  padding-top: 0.3em;
+  height: 30px;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  .header__menu--icon {
+    height: 35px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__menu--icon {
+    height: 40px;
+  }
+}
+.header__menu--icon:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .theme-toggle-icon {
+    height: 35px;
+    width: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .theme-toggle-icon {
+    height: 40px;
+  }
+}
+.theme-toggle-icon:hover {
+  transform: scale(1.2);
 }
 
 .footer {

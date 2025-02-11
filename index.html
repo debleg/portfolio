@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DebLeg - Portfolio</title>
-    <link rel="icon" type="image/png" href="./src/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="./src/favicon-32x32.png" />
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,11 +16,34 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <header class="neumorphism-base">
-      <input type="checkbox" id="theme-toggle" class="visually-hidden" tabindex="-1" />
-      <label for="theme-toggle" tabindex="0" class="to-light-theme"aria-label="Change theme"><i data-lucide="sprout"></i></label>
-      <label for="theme-toggle" tabindex="0" class="to-dark-theme" aria-label="Change theme"><i data-lucide="tree-deciduous"></i></label>
-
+    <header class="header neumorphism-base">
+      <img class="header__logo" src="./src/logos/DebLeg Large.svg" alt="Logo DebLeg">
+      <div class="header__interact">
+      <input
+        type="checkbox"
+        id="theme-toggle"
+        class="visually-hidden"
+        tabindex="-1"
+      />
+      <label
+        for="theme-toggle"
+        tabindex="0"
+        class="to-light-theme"
+        aria-label="Change theme"
+        ><i class="theme-toggle-icon" data-lucide="sprout"></i
+      ></label>
+      <label
+        for="theme-toggle"
+        tabindex="0"
+        class="to-dark-theme"
+        aria-label="Change theme"
+        ><i class="theme-toggle-icon" data-lucide="tree-deciduous"></i
+      ></label>
+    <nav class="header__menu">
+      <button class="header__menu--button neumorphism-base">
+      <i class="header__menu--icon" data-lucide="menu"></i></button>
+    </nav>
+    </div>
     </header>
     <main>
       <select data-i18n-switcher class="locale-switcher">
@@ -40,9 +63,7 @@
       </section>
 
       <section id="perso">
-        <h2>
-          <i></i><span data-i18n-key="perso"></span>
-        </h2>
+        <h2><i></i><span data-i18n-key="perso"></span></h2>
       </section>
 
       <section id="contact">
@@ -52,9 +73,16 @@
     <footer class="footer neumorphism-base">
       <p class="footer__copyright">© 2025 DebLeg</p>
       <div class="footer__connect">
-        <a href="#"><i class="footer__connect--icon" data-lucide="mail-plus"></i></a>
-        <a href="#"><i class="footer__connect--icon" data-lucide="linkedin"></i></a>
-        <a href="#"><i class="footer__connect--icon" data-lucide="github"></i></a></div>
+        <a href="#"
+          ><i class="footer__connect--icon" data-lucide="mail-plus"></i
+        ></a>
+        <a href="#"
+          ><i class="footer__connect--icon" data-lucide="linkedin"></i
+        ></a>
+        <a href="#"
+          ><i class="footer__connect--icon" data-lucide="github"></i
+        ></a>
+      </div>
     </footer>
     <!--The following lines allow the use of Lucide icons, using data-lucide as attribute for the desired icon-->
     <script src="https://unpkg.com/lucide@latest"></script>

@@ -1,0 +1,73 @@
+@use "./../base" as *;
+
+.header {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-height;
+  border-radius: 30px;
+
+  @include responsive(tablet-min) {
+    height: $header-height-tablet;
+  }
+  @include responsive(desktop) {
+    height: $header-height-desktop;
+  }
+  &__logo {
+    height: 40px;
+    width:auto;
+    background:radial-gradient(var(--logo-background) 20%, transparent 70%);
+    border-radius: 10px;
+    @include responsive(tablet-min){
+        height: 50px;
+    }
+    @include responsive(desktop) {
+        height: 60px;
+    }
+  }
+  &__interact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5em;
+  }
+  &__menu {
+    &--button{
+        background: var(--background);
+        border-radius: 10px;
+        color: inherit;
+        border: none; //taken care of with neumorphism
+    }
+    &--icon {
+        padding-top: 0.3em;
+        height: 30px;
+        width: auto;
+       @include responsive(tablet-min) {
+        height: 35px;
+       }
+        @include responsive(desktop){
+           height: 40px;
+        }
+        &:hover {
+            transform: scale(1.2);
+          
+          }
+    }
+  }
+}
+
+.theme-toggle-icon{
+      @include responsive(tablet-min) {
+    height: 35px;
+    width: auto;
+   }
+    @include responsive(desktop){
+       height: 40px;
+    }
+&:hover {
+  transform: scale(1.2);
+
+}
+}
