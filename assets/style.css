@@ -112,6 +112,10 @@ body {
 .light .to-light-theme {
   display: none;
 }
+.light .neumorphism-base {
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
+}
 
 .dark {
   --text: hsl(44, 100%, 85%);
@@ -121,6 +125,10 @@ body {
 }
 .dark .to-dark-theme {
   display: none;
+}
+.dark .neumorphism-base {
+  background: rgba(32, 44, 17, 0.2);
+  box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
 }
 
 body {
@@ -143,16 +151,6 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.light .footer {
-  background: rgba(0, 0, 0, 0.05);
-  box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
-}
-
-.dark .footer {
-  background: rgba(32, 44, 17, 0.2);
-  box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
 }
 
 .footer {

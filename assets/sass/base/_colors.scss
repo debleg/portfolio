@@ -7,6 +7,10 @@
     .to-light-theme {
       display: none;
     }
+    .neumorphism-base {
+      background: rgba(0, 0, 0, 0.05);
+      box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
+    }
 }
 
 .dark {
@@ -16,6 +20,10 @@
     --texture: url("./../src/cartographer-background-dark.png");
     .to-dark-theme {
       display: none;
+    }
+    .neumorphism-base {
+      background: #202c1133;
+      box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
     }
 }
 
