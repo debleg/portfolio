@@ -45,9 +45,9 @@ export function themeHandling() {
     }
     //due to visually hidden and tab index -1 the checkbox itself can't be used as target, the labels are what the user interacts with instead
     [lightLabel, darkLabel].forEach((label) => {
-        label === null || label === void 0 ? void 0 : label.addEventListener("click", toggleTheme);
+        label?.addEventListener("click", toggleTheme);
         //for keyboard accessibility
-        label === null || label === void 0 ? void 0 : label.addEventListener("keydown", (event) => {
+        label?.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault(); //no scroll on space bar press
                 toggleTheme();
