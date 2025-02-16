@@ -1,7 +1,6 @@
 {
-  "about": "Découverte",
+  "about": "À propos",
   "projects": "Projets",
-  "tech": "Compétences techniques",
-  "perso": "Compétences personnelles",
+  "skills": "Compétences",
   "contact": "Contact"
 }
