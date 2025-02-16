@@ -17,33 +17,38 @@
   </head>
   <body>
     <header class="header neumorphism-base">
-      <img class="header__logo" src="./src/logos/DebLeg Large.svg" alt="Logo DebLeg">
-      <div class="header__interact">
-      <input
-        type="checkbox"
-        id="theme-toggle"
-        class="visually-hidden"
-        tabindex="-1"
+      <img
+        class="header__logo"
+        src="./src/logos/DebLeg Large.svg"
+        alt="Logo DebLeg"
       />
-      <label
-        for="theme-toggle"
-        tabindex="0"
-        class="to-light-theme"
-        aria-label="Change theme"
-        ><i class="theme-toggle-icon" data-lucide="sprout"></i
-      ></label>
-      <label
-        for="theme-toggle"
-        tabindex="0"
-        class="to-dark-theme"
-        aria-label="Change theme"
-        ><i class="theme-toggle-icon" data-lucide="tree-deciduous"></i
-      ></label>
-    <nav class="header__menu">
-      <button class="header__menu--button neumorphism-base">
-      <i class="header__menu--icon" data-lucide="menu"></i></button>
-    </nav>
-    </div>
+      <div class="header__interact">
+        <input
+          type="checkbox"
+          id="theme-toggle"
+          class="visually-hidden"
+          tabindex="-1"
+        />
+        <label
+          for="theme-toggle"
+          tabindex="0"
+          class="to-light-theme"
+          aria-label="Change theme"
+          ><i class="theme-toggle-icon" data-lucide="sprout"></i
+        ></label>
+        <label
+          for="theme-toggle"
+          tabindex="0"
+          class="to-dark-theme"
+          aria-label="Change theme"
+          ><i class="theme-toggle-icon" data-lucide="tree-deciduous"></i
+        ></label>
+        <nav class="header__menu">
+          <button class="header__menu--button neumorphism-base">
+            <i class="header__menu--icon" data-lucide="menu"></i>
+          </button>
+        </nav>
+      </div>
     </header>
     <main>
       <select data-i18n-switcher class="locale-switcher">
@@ -89,6 +94,6 @@
     <script>
       lucide.createIcons();
     </script>
-    <script src="./dist/index.js"></script>
+    <script type="module" src="./dist/index.js"></script>
   </body>
 </html>
