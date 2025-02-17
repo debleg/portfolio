@@ -118,7 +118,7 @@ export function i18nSetup() {
 
         const translation = translations[key];
         if (translation) {
-          element.innerText = translation;
+          element.innerHTML = translation;
         } else {
           console.warn(`Translation missing for key: ${key}"`);
         }
