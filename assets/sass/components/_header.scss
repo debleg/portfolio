@@ -39,6 +39,9 @@
       border-radius: 10px;
       color: inherit;
       border: none; //taken care of with neumorphism
+      &.close {
+        float: right;
+      }
     }
     &--icon {
       padding-top: 0.3em;
@@ -54,14 +57,31 @@
         transform: scale(1.2);
       }
     }
+    &--dialog {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
     &--list {
       list-style: none;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2em;
+      padding: 2em;
+      @include responsive(desktop) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1em;
+        padding: 0;
+      }
     }
     &--listitem {
       list-style: none;
+
     }
     &--link {
       text-decoration: none;
@@ -69,6 +89,8 @@
       position: relative;
       font-weight: $fw-3;
       font-size: 1.3em;
+      display: flex;
+      align-items: center;
       &::after {
         content: "";
         position: absolute;
@@ -81,6 +103,10 @@
       }
       &:hover::after {
         width: 100%;
+      }
+      & svg {
+        margin-top: 0.1em;
+        margin-right: 0.5em;
       }
     }
   }
@@ -97,4 +123,18 @@
   &:hover {
     transform: scale(1.2);
   }
+}
+
+.custom-dialog {
+  background-color: inherit;
+  color:inherit;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  --moz-backdrop-filter: blur(10px);
+  background-color: #e2eed322; //works for dark theme!! ** #202c1133 for light theme? (or take text color with very low opacity)
+  border-radius: 30px;
+  border: 1px #ffffff3d solid; //for dark theme!!
 }

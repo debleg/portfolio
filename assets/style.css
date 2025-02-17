@@ -208,6 +208,9 @@ body {
   color: inherit;
   border: none;
 }
+.header__menu--button.close {
+  float: right;
+}
 .header__menu--icon {
   padding-top: 0.3em;
   height: 30px;
@@ -226,11 +229,29 @@ body {
 .header__menu--icon:hover {
   transform: scale(1.2);
 }
+.header__menu--dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 .header__menu--list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2em;
+  padding: 2em;
+}
+@media screen and (min-width: 1280px) {
+  .header__menu--list {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+  }
 }
 .header__menu--listitem {
   list-style: none;
@@ -241,6 +262,8 @@ body {
   position: relative;
   font-weight: 600;
   font-size: 1.3em;
+  display: flex;
+  align-items: center;
 }
 .header__menu--link::after {
   content: "";
@@ -254,6 +277,10 @@ body {
 }
 .header__menu--link:hover::after {
   width: 100%;
+}
+.header__menu--link svg {
+  margin-top: 0.1em;
+  margin-right: 0.5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -269,6 +296,21 @@ body {
 }
 .theme-toggle-icon:hover {
   transform: scale(1.2);
+}
+
+.custom-dialog {
+  background-color: inherit;
+  color: inherit;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  --moz-backdrop-filter: blur(10px);
+  background-color: rgba(226, 238, 211, 0.1333333333);
+  border-radius: 30px;
+  border: 1px rgba(255, 255, 255, 0.2392156863) solid;
 }
 
 .footer {
