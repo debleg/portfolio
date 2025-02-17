@@ -94,6 +94,21 @@ main {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .small-nav {
+    display: none;
+  }
+}
+
+.large-nav {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .large-nav {
+    display: flex;
+  }
+}
+
 html {
   font-size: 100%;
 }
