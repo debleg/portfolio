@@ -286,4 +286,44 @@ body {
 }
 .footer__connect--icon:hover {
   transform: scale(1.2);
+}
+
+#skills {
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.tech-skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.tech-skill__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 100px;
+  padding: 1em;
+  border-radius: 16px;
+}
+.tech-skill__item--logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tech-skill__item--logo > svg {
+  height: 40px;
+  width: auto;
+}
+.tech-skill__item--name {
+  font-weight: 400;
+  font-size: 1.3em;
 }/*# sourceMappingURL=style.css.map */
