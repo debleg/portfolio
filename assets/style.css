@@ -226,6 +226,35 @@ body {
 .header__menu--icon:hover {
   transform: scale(1.2);
 }
+.header__menu--list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__menu--listitem {
+  list-style: none;
+}
+.header__menu--link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.header__menu--link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text);
+  transition: width 0.2s ease-in;
+}
+.header__menu--link:hover::after {
+  width: 100%;
+}
 
 @media screen and (min-width: 768px) {
   .theme-toggle-icon {
