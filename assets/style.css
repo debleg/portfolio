@@ -116,6 +116,10 @@ body {
   background: rgba(0, 0, 0, 0.05);
   box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
 }
+.light .neumorphism-raised {
+  background: #e2eed3;
+  box-shadow: 4px 4px 10px #d0dbc2, -4px -4px 10px #f4ffe4;
+}
 
 .dark {
   --text: hsl(44, 100%, 85%);
@@ -130,13 +134,18 @@ body {
   background: rgba(32, 44, 17, 0.2);
   box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
 }
+.dark .neumorphism-raised {
+  background: #202c11;
+  box-shadow: 4px 4px 10px #17200c, -4px -4px 10px #293816;
+}
 
 body {
   background-color: var(--background);
   color: var(--text);
 }
 
-.to-dark-theme, .to-light-theme {
+.to-dark-theme,
+.to-light-theme {
   cursor: pointer;
 }
 

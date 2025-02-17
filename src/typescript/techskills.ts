@@ -41,7 +41,7 @@ export function techSkillsShowcase() {
       fetchedSkills.forEach((tech) => {
 
         const skillItem = document.createElement("div");
-        skillItem.className = "tech-skill__item";
+        skillItem.className = "tech-skill__item, neumorphism-raised";
         
         const skillLogo = document.createElement("div");
         skillLogo.className = "tech-skill__item--logo";
