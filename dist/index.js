@@ -7,4 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 i18nSetup();
 techSkillsShowcase();
+//dialog logic, needed for menu and projects
+const dialogs = document.querySelectorAll(".dialog");
+const openButtons = document.querySelectorAll(".open-dialog");
+const closeButtons = document.querySelectorAll(".close-dialog");
+dialogs.forEach((dialog, index) => {
+    const openButton = openButtons[index];
+    const closeButton = closeButtons[index];
+    if (openButton && dialog) {
+        openButton.addEventListener("click", () => dialog.showModal());
+    }
+    if (closeButton && dialog) {
+        closeButton.addEventListener("click", () => dialog.close());
+    }
+});
 //# sourceMappingURL=index.js.map

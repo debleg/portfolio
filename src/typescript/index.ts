@@ -10,3 +10,24 @@
 
 i18nSetup();
 techSkillsShowcase();
+
+
+//dialog logic, needed for menu and projects
+const dialogs = document.querySelectorAll<HTMLDialogElement>(".dialog");
+const openButtons = document.querySelectorAll<HTMLButtonElement>(".open-dialog");
+const closeButtons = document.querySelectorAll<HTMLButtonElement>(".close-dialog");
+
+
+dialogs.forEach((dialog:HTMLDialogElement, index) => {
+  const openButton = openButtons[index]
+  const closeButton = closeButtons[index]
+
+  if (openButton && dialog) {
+  openButton.addEventListener("click", () => dialog.showModal());
+  }
+
+  if (closeButton && dialog) {
+    closeButton.addEventListener("click", () => dialog.close());
+  }
+  
+})
