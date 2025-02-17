@@ -23,6 +23,39 @@
         alt="Logo DebLeg"
       />
       <div class="header__interact">
+        <nav class="header__menu">
+          <ul>
+            <li>
+              <a href="#about">
+                <i data-lucide="badge-info"></i
+                ><span data-i18n-key="about"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <i data-lucide="folder-code"></i
+                ><span data-i18n-key="projects"></span>
+              </a>
+            </li>
+            <li>
+              <a href="skills">
+                <i data-lucide="pocket-knife"></i
+                ><span data-i18n-key="skills"></span>
+              </a>
+            </li>
+            <li>
+              <a href="contact">
+                <i data-lucide="square-pen"></i
+                ><span data-i18n-key="contact"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <select data-i18n-switcher class="locale-switcher">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+
         <input
           type="checkbox"
           id="theme-toggle"
@@ -43,34 +76,80 @@
           aria-label="Change theme"
           ><i class="theme-toggle-icon" data-lucide="tree-deciduous"></i
         ></label>
-        <nav class="header__menu">
-          <button class="header__menu--button neumorphism-base">
-            <i class="header__menu--icon" data-lucide="menu"></i>
+
+        <button
+          class="header__menu--button neumorphism-base"
+          aria-label="Close Menu"
+        >
+          <i class="header__menu--icon" data-lucide="menu"></i>
+        </button>
+        <dialog class="custom-dialog" id="menu-dialog">
+          <button
+            class="close header__menu--button neumorphism-base"
+            aria-label="Close Menu"
+          >
+            <i class="header__menu--icon" data-lucide="x"></i>
           </button>
-        </nav>
+          <nav class="header__menu--dialog">
+            <ul>
+              <li>
+                <a href="#about">
+                  <i data-lucide="badge-info"></i
+                  ><span data-i18n-key="about"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects">
+                  <i data-lucide="folder-code"></i
+                  ><span data-i18n-key="projects"></span>
+                </a>
+              </li>
+              <li>
+                <a href="skills">
+                  <i data-lucide="pocket-knife"></i
+                  ><span data-i18n-key="skills"></span>
+                </a>
+              </li>
+              <li>
+                <a href="contact">
+                  <i data-lucide="square-pen"></i
+                  ><span data-i18n-key="contact"></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <select data-i18n-switcher class="locale-switcher">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </dialog>
       </div>
     </header>
     <main>
-      <select data-i18n-switcher class="locale-switcher">
-        <option value="en">English</option>
-        <option value="fr">Français</option>
-      </select>
       <h1></h1>
       <section id="about">
-        <h2><i data-lucide="badge-info"></i><span data-i18n-key="about"></span></h2>
+        <h2>
+          <i data-lucide="badge-info"></i><span data-i18n-key="about"></span>
+        </h2>
       </section>
       <section id="projects">
-        <h2><i data-lucide="folder-code"></i><span data-i18n-key="projects"></span></h2>
+        <h2>
+          <i data-lucide="folder-code"></i
+          ><span data-i18n-key="projects"></span>
+        </h2>
       </section>
 
       <section id="skills" class="neumorphism-base">
-        <h2><i data-lucide="pocket-knife"></i><span data-i18n-key="skills"></span></h2>
+        <h2>
+          <i data-lucide="pocket-knife"></i><span data-i18n-key="skills"></span>
+        </h2>
         <div id="tech-skills" class="tech-skills"></div>
       </section>
 
-
       <section id="contact">
-        <h2><i data-lucide="square-pen"></i><span data-i18n-key="contact"></span></h2>
+        <h2>
+          <i data-lucide="square-pen"></i><span data-i18n-key="contact"></span>
+        </h2>
       </section>
     </main>
     <footer class="footer neumorphism-base">
