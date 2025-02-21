@@ -86,6 +86,7 @@ export function projectsShowcase() {
                 const projectRepo = document.createElement("a");
                 projectRepo.className = "project__link--repo";
                 projectRepo.href = project.repo;
+                projectRepo.target = "_blank";
                 projectRepo.setAttribute("aria-label", "Github Code");
                 const projectRepoIcon = document.createElement("i");
                 projectRepoIcon.setAttribute("data-lucide", "github");
@@ -97,6 +98,7 @@ export function projectsShowcase() {
                     const projectSite = document.createElement("a");
                     projectSite.className = "project__link--website";
                     projectSite.href = project.website;
+                    projectSite.target = "_blank";
                     projectSite.setAttribute("aria-label", "website");
                     const projectSiteIcon = document.createElement("i");
                     projectSiteIcon.setAttribute("data-lucide", "link");
