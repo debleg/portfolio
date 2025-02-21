@@ -1,6 +1,11 @@
 {
   "about": "About",
   "projects": "Projects",
+  "discover": "Discover",
+  "oh-blurb": "BLURB TEXT",
+  "oh-desc": "Description",
+  "nina-blurb": "BLURB TEXT",
+  "nina-desc": "Description",
   "skills": " Skills",
   "contact": "Contact"
 }
