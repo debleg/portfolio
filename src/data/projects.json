@@ -3,7 +3,7 @@
     "id": "ohmy",
     "name": "ohmyfood",
     "blurb": "oh-blurb",
-    "tech": "Sass",
+    "tech": ["sass"],
     "img": "INSERTIMG",
     "description": "oh-desc",
     "repo": "https://github.com/debleg/OC-P4-Ohmyfood",

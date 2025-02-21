@@ -10,16 +10,20 @@ export function projectsShowcase() {
     id: string; //to differenciate projects and help dialog interaction
     name: string; //i18n attribute
     blurb: string; //i18n attribute
-    tech?: string; //tech logos, maybe different aspect
+    tech?: string[]; //tech logos, maybe different aspect
     img: string;
     description: string; //i18n attribute
     repo: string;
     website?: string;
   }
 
+  interface TechLogos {
+    [key: string]: string;
+  }
+
   let projects: Project[] = [];
 
-  const techLogos: object = {
+  const techLogos: TechLogos = {
     sass: "./src/logos/sass.svg",
   };
 
@@ -67,11 +71,20 @@ export function projectsShowcase() {
         projectBlurb.setAttribute("data-i18n-key", project.blurb);
         projectItem.appendChild(projectBlurb);
 
-        //the tech is optional, maps through the logo list
+        //the tech is optional, loop through the logo list to find relevant ones
         if (project.tech) {
-          const projectTech = document.createElement("img");
-          projectTech.className = "project__tech";
-          projectItem.appendChild(projectTech);
+          project.tech.forEach((techLogo) => {
+            //wrap logos in a div, even if there's only one, for styling purposes
+            const projectTechs = document.createElement("div");
+            projectTechs.className = "project__tech";
+            const projectTech = document.createElement("img");
+            projectTech.src = techLogos[techLogo];
+            projectTech.alt = techLogo;
+
+            projectTech.className = "project__tech--img";
+            projectTechs.appendChild(projectTech);
+            projectItem.appendChild(projectTechs);
+          });
         }
 
         //the open button is in the main div
