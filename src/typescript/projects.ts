@@ -60,16 +60,10 @@ export function projectsShowcase() {
         const projectItem = document.createElement("div");
         projectItem.className = "project neumorphism-raised";
 
-        //creating the name and blurb
         const projectName = document.createElement("h3");
         projectName.className = "project__title";
         projectName.innerText = project.name;
         projectItem.appendChild(projectName);
-
-        const projectBlurb = document.createElement("p");
-        projectBlurb.className = "project__blurb";
-        projectBlurb.setAttribute("data-i18n-key", project.blurb);
-        projectItem.appendChild(projectBlurb);
 
         //the tech is optional, loop through the logo list to find relevant ones
         if (project.tech) {
@@ -86,6 +80,11 @@ export function projectsShowcase() {
             projectItem.appendChild(projectTechs);
           });
         }
+
+        const projectBlurb = document.createElement("p");
+        projectBlurb.className = "project__blurb";
+        projectBlurb.setAttribute("data-i18n-key", project.blurb);
+        projectItem.appendChild(projectBlurb);
 
         //the open button is in the main div
         const openButton = document.createElement("button");
