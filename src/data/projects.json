@@ -1,5 +1,7 @@
 [
-    {"name": "ohmyfood",
+  {
+    "id": "ohmy",
+    "name": "ohmyfood",
     "blurb": "oh-blurb",
     "tech": "Sass",
     "img": "INSERTIMG",
@@ -8,6 +10,7 @@
     "website": "https://debleg.github.io/OC-P4-Ohmyfood/"
   },
   {
+    "id": "ninac",
     "name": "Nina Carducci",
     "blurb": "nina-blurb",
     "img": "INSERTIMG",
