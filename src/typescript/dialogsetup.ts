@@ -1,20 +1,32 @@
 export function setupDialogListeners() {
-  //complete overhaul: modals need to work on both menu and projects, linking buttons to modals prevents issues, heavy nesting for typescript safety
+  /* This logic was modified multiple times
+    
+    Initially it only applied to the mobile menu and stayed relatively simple
+    
+    Then it had to incorporate the projects and it got complicated and heavily nested
+     
+    Then icons got in the way of clicking on buttons hence the use of closest
+    */
+
   document.body.addEventListener("click", (event) => {
     const target = event.target as HTMLElement;
 
-    if (target.classList.contains("open-dialog")) {
-      const dialogId = target.getAttribute("data-dialog-target");
+    const openButton = target.closest(".open-dialog") as HTMLElement | null;
+    if (openButton) {
+      const dialogId = openButton.getAttribute("data-dialog-target");
       if (dialogId) {
         const dialog = document.getElementById(
           dialogId
         ) as HTMLDialogElement | null;
-        if (dialog) dialog.showModal();
+        if (dialog) {
+          dialog.showModal();
+        }
       }
     }
 
-    if (target.classList.contains("close-dialog")) {
-      const dialogId = target.getAttribute("data-dialog-id");
+    const closeButton = target.closest(".close-dialog") as HTMLElement | null;
+    if (closeButton) {
+      const dialogId = closeButton.getAttribute("data-dialog-id");
       if (dialogId) {
         const dialog = document.getElementById(
           dialogId
