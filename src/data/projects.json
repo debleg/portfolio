@@ -1,0 +1,18 @@
+[
+    {"name": "ohmyfood",
+    "blurb": "oh-blurb",
+    "tech": "Sass",
+    "img": "INSERTIMG",
+    "description": "oh-desc",
+    "repo": "https://github.com/debleg/OC-P4-Ohmyfood",
+    "website": "https://debleg.github.io/OC-P4-Ohmyfood/"
+  },
+  {
+    "name": "Nina Carducci",
+    "blurb": "nina-blurb",
+    "img": "INSERTIMG",
+    "description": "nina-desc",
+    "repo": "https://github.com/debleg/OC-P8-Nina-Carducci",
+    "website": "https://debleg.github.io/OC-P8-Nina-Carducci/"
+  }
+]
