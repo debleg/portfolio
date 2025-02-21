@@ -71,50 +71,10 @@
 
         <button
           class="open-dialog header__menu--button neumorphism-base small-nav"
-          aria-label="Menu"
+          aria-label="Menu" data-dialog-target="menu-dialog"
         >
           <i class="header__menu--icon" data-lucide="menu" aria-hidden="true"></i>
         </button>
-        <dialog class="dialog custom-dialog">
-          <button
-            class="close-dialog header__menu--button neumorphism-base"
-            aria-label="Close Menu"
-          >
-            <i class="header__menu--icon" data-lucide="x" aria-hidden="true"></i>
-          </button>
-          <nav class="header__menu--dialog">
-            <ul class="header__menu--list">
-              <li class="header__menu--listitem">
-                <a href="#about" class="header__menu--link">
-                  <i data-lucide="badge-info" aria-hidden="true"></i
-                  ><span data-i18n-key="about"></span>
-                </a>
-              </li>
-              <li class="header__menu--listitem">
-                <a href="#projects" class="header__menu--link">
-                  <i data-lucide="folder-code" aria-hidden="true"></i
-                  ><span data-i18n-key="projects"></span>
-                </a>
-              </li>
-              <li class="header__menu--listitem">
-                <a href="skills" class="header__menu--link">
-                  <i data-lucide="pocket-knife" aria-hidden="true"></i
-                  ><span data-i18n-key="skills"></span>
-                </a>
-              </li>
-              <li class="header__menu--listitem">
-                <a href="contact" class="header__menu--link">
-                  <i data-lucide="square-pen" aria-hidden="true"></i
-                  ><span data-i18n-key="contact"></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <select data-i18n-switcher class="locale-switcher">
-            <option value="en">English</option>
-            <option value="fr">Français</option>
-          </select>
-        </dialog>
       </div>
     </header>
     <main>
@@ -159,6 +119,47 @@
         ></a>
       </div>
     </footer>
+    <!--Menu dialog-->
+    <dialog id="menu-dialog" class="dialog custom-dialog">
+      <button
+        class="close-dialog header__menu--button neumorphism-base"
+        aria-label="Close Menu" data-dialog-id="menu-dialog"
+      >
+        <i class="header__menu--icon" data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <nav class="header__menu--dialog">
+        <ul class="header__menu--list">
+          <li class="header__menu--listitem">
+            <a href="#about" class="header__menu--link">
+              <i data-lucide="badge-info" aria-hidden="true"></i
+              ><span data-i18n-key="about"></span>
+            </a>
+          </li>
+          <li class="header__menu--listitem">
+            <a href="#projects" class="header__menu--link">
+              <i data-lucide="folder-code" aria-hidden="true"></i
+              ><span data-i18n-key="projects"></span>
+            </a>
+          </li>
+          <li class="header__menu--listitem">
+            <a href="skills" class="header__menu--link">
+              <i data-lucide="pocket-knife" aria-hidden="true"></i
+              ><span data-i18n-key="skills"></span>
+            </a>
+          </li>
+          <li class="header__menu--listitem">
+            <a href="contact" class="header__menu--link">
+              <i data-lucide="square-pen" aria-hidden="true"></i
+              ><span data-i18n-key="contact"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <select data-i18n-switcher class="locale-switcher">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
+    </dialog>
     <!--The following lines allow the use of Lucide icons, using data-lucide as attribute for the desired icon-->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
