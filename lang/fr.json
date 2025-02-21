@@ -2,10 +2,10 @@
   "about": "À propos",
   "projects": "Projets",
   "discover": "Découvrir",
-  "oh-blurb": "TEXTE BLURB",
-  "oh-desc": "Déscription",
-  "nina-blurb": "TEXTE BLURB",
-  "nina-desc": "Description",
+  "oh-blurb": "Site de présentation et réservation de menus restaurants",
+  "oh-desc": "Projet de formation </br> Sur la base d'une maquette, construction du site en HTML et SASS/SCSS, avec des animations répondant à des demandes spécifiques",
+  "nina-blurb": "Portfolio d'une photographe",
+  "nina-desc": "Projet de formation </br> Sur la base d'un site existant, amélioration du référencement (SEO), des performances et de l'accessibilité grâce à des outils comme Google Lighthouse, Wave, ...",
   "skills": "Compétences",
   "contact": "Contact"
 }

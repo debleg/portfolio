@@ -2,10 +2,10 @@
   "about": "About",
   "projects": "Projects",
   "discover": "Discover",
-  "oh-blurb": "BLURB TEXT",
-  "oh-desc": "Description",
-  "nina-blurb": "BLURB TEXT",
-  "nina-desc": "Description",
+  "oh-blurb": "Restaurant menu showcase and booking website",
+  "oh-desc": "Course project </br> Based on a mockup and assets, the site was built in html and SASS/SCSS, with predetermined animations",
+  "nina-blurb": "Photographer's portfolio website",
+  "nina-desc": "Course project</br> Based on an existing site, improvements were made for SEO, performance and accessibility, achieved through tools such as Google LightHouse, Wave, ....",
   "skills": " Skills",
   "contact": "Contact"
 }
