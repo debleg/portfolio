@@ -36,31 +36,41 @@ export function projectsShowcase() {
                 projectItem.className = "project neumorphism-raised";
                 //creating the name and blurb
                 const projectName = document.createElement("h3");
+                projectName.className = "project__title";
                 projectItem.appendChild(projectName);
                 const projectBlurb = document.createElement("p");
+                projectBlurb.className = "project__blurb";
                 projectItem.appendChild(projectBlurb);
                 //the tech is optional, maps through the logo list
                 if (project.tech) {
                     const projectTech = document.createElement("img");
+                    projectTech.className = "project__tech";
                     projectItem.appendChild(projectTech);
                 }
                 //the open button is in the main div
                 const openButton = document.createElement("button");
+                openButton.className = "project__button open-dialog";
                 projectItem.appendChild(openButton);
                 //the dialog is in the main div and every other element inside it
                 const modal = document.createElement("dialog");
+                modal.className = "dialog project-dialog";
                 projectItem.appendChild(modal);
                 const closeButton = document.createElement("button");
+                closeButton.className = "project__close close-dialog";
                 modal.appendChild(closeButton);
                 const projectCover = document.createElement("img");
+                projectCover.className = "project__cover";
                 modal.appendChild(projectCover);
                 const projectDesc = document.createElement("div");
+                projectDesc.className = "project__desc";
                 modal.appendChild(projectDesc);
                 const projectRepo = document.createElement("a");
+                projectRepo.className = "project__link--repo";
                 modal.appendChild(projectRepo);
                 //the project website is optional, not all projects are deployed
                 if (project.website) {
                     const projectSite = document.createElement("a");
+                    projectSite.className = "project__link--website";
                     modal.appendChild(projectSite);
                 }
                 projectDiv?.appendChild(projectItem);
