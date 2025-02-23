@@ -84,13 +84,14 @@
     }
     &--listitem {
       list-style: none;
+      font-size: 1.5em;
+      font-weight: $fw-3;
     }
     &--link {
       text-decoration: none;
       color: inherit;
       position: relative;
-      font-weight: $fw-3;
-      font-size: 1.3em;
+
       display: flex;
       align-items: center;
       &::after {
@@ -114,6 +115,18 @@
   }
 }
 
+#menu-dialog {
+  display: flex;
+  flex-direction: column;
+  & .footer__connect {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+  }
+}
+
+// Theme toggle handling
 .theme-toggle-icon {
   @include responsive(tablet-min) {
     height: 35px;
@@ -127,20 +140,7 @@
   }
 }
 
-.custom-dialog {
-  background-color: inherit;
-  color: inherit;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(10px);
-  --webkit-backdrop-filter: blur(10px);
-  --moz-backdrop-filter: blur(10px);
-  background-color: #e2eed322; //works for dark theme!! ** #202c1133 for light theme? (or take text color with very low opacity)
-  border-radius: 30px;
-  border: 1px #ffffff3d solid; //for dark theme!!
-}
-
+// Language switch handling
 .locale-switcher {
   background-color: inherit; // keep here for firefox
   color: inherit;
@@ -149,6 +149,9 @@
   font-size: 1.25em;
   font-weight: 600;
   border: 1px solid var(--text);
+  @include responsive(desktop) {
+    font-size: 1.4em;
+  }
 
   & option[value="en"],
   option[value="fr"] {

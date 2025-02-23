@@ -79,6 +79,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+body:has(dialog[open]) {
+  overflow: hidden;
+}
 
 main {
   max-width: 1440px;
@@ -266,13 +269,13 @@ body {
 }
 .header__menu--listitem {
   list-style: none;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 .header__menu--link {
   text-decoration: none;
   color: inherit;
   position: relative;
-  font-weight: 600;
-  font-size: 1.3em;
   display: flex;
   align-items: center;
 }
@@ -294,6 +297,17 @@ body {
   margin-right: 0.5em;
 }
 
+#menu-dialog {
+  display: flex;
+  flex-direction: column;
+}
+#menu-dialog .footer__connect {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
 @media screen and (min-width: 768px) {
   .theme-toggle-icon {
     height: 35px;
@@ -309,21 +323,6 @@ body {
   transform: scale(1.2);
 }
 
-.custom-dialog {
-  background-color: inherit;
-  color: inherit;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  --webkit-backdrop-filter: blur(10px);
-  --moz-backdrop-filter: blur(10px);
-  background-color: rgba(226, 238, 211, 0.1333333333);
-  border-radius: 30px;
-  border: 1px rgba(255, 255, 255, 0.2392156863) solid;
-}
-
 .locale-switcher {
   background-color: inherit;
   color: inherit;
@@ -332,6 +331,11 @@ body {
   font-size: 1.25em;
   font-weight: 600;
   border: 1px solid var(--text);
+}
+@media screen and (min-width: 1280px) {
+  .locale-switcher {
+    font-size: 1.4em;
+  }
 }
 .locale-switcher option[value=en],
 .locale-switcher option[value=fr] {
@@ -448,4 +452,23 @@ body {
 .tech-skill__item--name {
   font-weight: 400;
   font-size: 1.3em;
+}
+
+.dialog {
+  box-sizing: content-box;
+  background-color: rgba(226, 238, 211, 0.1333333333);
+  color: inherit;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  --webkit-backdrop-filter: blur(15px);
+  --moz-backdrop-filter: blur(15px);
+  border-radius: 30px;
+  border: 2px rgba(255, 255, 255, 0.2392156863) solid;
+}
+
+.close-dialog {
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */

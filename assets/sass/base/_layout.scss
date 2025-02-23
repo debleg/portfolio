@@ -18,6 +18,9 @@ body {
   min-width: 320px;
   display: flex;
   flex-direction: column;
+  &:has(dialog[open]) {
+    overflow: hidden;
+}
 }
 
 main {
