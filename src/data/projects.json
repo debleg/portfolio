@@ -4,18 +4,56 @@
     "name": "ohmyfood",
     "blurb": "oh-blurb",
     "tech": ["sass"],
-    "img": "INSERTIMG",
+    "img": "",
     "description": "oh-desc",
     "repo": "https://github.com/debleg/OC-P4-Ohmyfood",
     "website": "https://debleg.github.io/OC-P4-Ohmyfood/"
   },
   {
+    "id": "soph",
+    "name": "Sophie Bluel",
+    "blurb": "soph-blurb",
+    "tech": ["javascript"],
+    "img": "",
+    "description": "soph-desc",
+    "repo": "https://github.com/debleg/OC-P6-Sophie-Bluel"
+  },
+  {
+    "id": "kasa",
+    "name": "Kasa",
+    "blurb": "kasa-blurb",
+    "tech": ["react", "sass"],
+    "img": "",
+    "description": "kasa-desc",
+    "repo": "https://github.com/debleg/OC-P7-Kasa"
+  },
+  {
     "id": "ninac",
     "name": "Nina Carducci",
     "blurb": "nina-blurb",
-    "img": "INSERTIMG",
+    "tech": ["lighthouse"],
+    "img": "",
     "description": "nina-desc",
     "repo": "https://github.com/debleg/OC-P8-Nina-Carducci",
     "website": "https://debleg.github.io/OC-P8-Nina-Carducci/"
+  },
+  {
+    "id": "arba",
+    "name": "ArgentBank",
+    "blurb": "arba-blurb",
+    "tech": ["react","redux"],
+    "img": "",
+    "description": "arba-desc",
+    "repo": "https://github.com/debleg/OC-P10-ArgentBank-Frontend"
+  },
+  {
+    "id": "portfolio",
+    "name": "My portfolio",
+    "blurb": "pf-blurb",
+    "tech": ["typescript", "sass"],
+    "img": "",
+    "description": "pf-desc",
+    "repo": "https://github.com/debleg/portfolio",
+    "website": "https://debleg.github.io/portfolio/"
   }
 ]
