@@ -4,7 +4,7 @@
     "name": "ohmyfood",
     "blurb": "oh-blurb",
     "tech": ["sass", "git"],
-    "img": "",
+    "img": "./src/projects/ohmy-headerview.png",
     "description": "oh-desc",
     "repo": "https://github.com/debleg/OC-P4-Ohmyfood",
     "website": "https://debleg.github.io/OC-P4-Ohmyfood/"
@@ -14,7 +14,7 @@
     "name": "Sophie Bluel",
     "blurb": "soph-blurb",
     "tech": ["javascript", "figma"],
-    "img": "",
+    "img": "./src/projects/sophie-interface.png",
     "description": "soph-desc",
     "repo": "https://github.com/debleg/OC-P6-Sophie-Bluel"
   },
@@ -23,7 +23,7 @@
     "name": "Kasa",
     "blurb": "kasa-blurb",
     "tech": ["react", "sass", "figma"],
-    "img": "",
+    "img": "./src/projects/kasa-illustration.png",
     "description": "kasa-desc",
     "repo": "https://github.com/debleg/OC-P7-Kasa"
   },
@@ -32,7 +32,7 @@
     "name": "Nina Carducci",
     "blurb": "nina-blurb",
     "tech": ["lighthouse"],
-    "img": "",
+    "img": "./src/projects/nina-lighthouse.png",
     "description": "nina-desc",
     "repo": "https://github.com/debleg/OC-P8-Nina-Carducci",
     "website": "https://debleg.github.io/OC-P8-Nina-Carducci/"
