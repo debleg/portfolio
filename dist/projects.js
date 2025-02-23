@@ -3,7 +3,15 @@ export function projectsShowcase() {
     const modalDiv = document.getElementById("modal-container");
     let projects = [];
     const techLogos = {
+        html: "./src/logos/html5.svg",
+        css: "./src/logos/css.svg",
         sass: "./src/logos/sass.svg",
+        javascript: "./src/logos/javascript.svg",
+        typescript: "./src/logos/typescript.svg",
+        react: "./src/logos/react.svg",
+        lighthouse: "./src/logos/lighthouse.svg",
+        redux: "./src/logos/redux.svg",
+        sql: "./src/logos/sql.svg"
     };
     /**
      * Fetches projects from json file
