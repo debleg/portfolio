@@ -25,13 +25,6 @@ export function i18nSetup() {
     //the translations relocated to json files
     let translations: Translations = {};
 
-    //as the page loads
-    document.addEventListener("DOMContentLoaded", () => {
-      setLocale(defaultLocale);
-      bindLocaleSwitcher(defaultLocale);
-    });
-
-
     /**
      * Handles language switcher interaction and sets user preference accordingly
      */
@@ -55,7 +48,6 @@ export function i18nSetup() {
       }
     }
 
-    
     /**
      * Fetches new translations, applies them, and updates the html lang on language change
      */
@@ -93,7 +85,6 @@ export function i18nSetup() {
       }
     }
 
-    
     /**
      * Replaces all translatable elements to match user preference
      */
@@ -127,13 +118,16 @@ export function i18nSetup() {
       }
     }
 
-
     /**
      * Updates the lang attribute to match applied translations
      */
     function updateHtmlLang(newLocale: string) {
       document.documentElement.setAttribute("lang", newLocale);
     }
+
+    //call functions here, are called in index when the Dom content is loaded, needed to make sure what needs translated gets generated first!
+    setLocale(defaultLocale);
+    bindLocaleSwitcher(defaultLocale);
   } catch (error) {
     console.error("Error in i18nSetup:", error);
   }

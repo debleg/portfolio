@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeHandling();
     projectsShowcase();
     setupDialogListeners();
+    i18nSetup();
 });
-i18nSetup();
 techSkillsShowcase();
 //# sourceMappingURL=index.js.map
