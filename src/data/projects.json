@@ -3,7 +3,7 @@
     "id": "ohmy",
     "name": "ohmyfood",
     "blurb": "oh-blurb",
-    "tech": ["sass"],
+    "tech": ["sass", "git", "github"],
     "img": "",
     "description": "oh-desc",
     "repo": "https://github.com/debleg/OC-P4-Ohmyfood",
@@ -13,7 +13,7 @@
     "id": "soph",
     "name": "Sophie Bluel",
     "blurb": "soph-blurb",
-    "tech": ["javascript"],
+    "tech": ["javascript", "figma"],
     "img": "",
     "description": "soph-desc",
     "repo": "https://github.com/debleg/OC-P6-Sophie-Bluel"
@@ -22,7 +22,7 @@
     "id": "kasa",
     "name": "Kasa",
     "blurb": "kasa-blurb",
-    "tech": ["react", "sass"],
+    "tech": ["react", "sass", "figma"],
     "img": "",
     "description": "kasa-desc",
     "repo": "https://github.com/debleg/OC-P7-Kasa"
