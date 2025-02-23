@@ -10,7 +10,6 @@ export function projectsShowcase() {
         typescript: "./src/logos/typescript.svg",
         react: "./src/logos/react_dark.svg",
         lighthouse: "./src/logos/lighthouse.svg",
-        redux: "./src/logos/redux.svg",
         figma: "./src/logos/figma.svg",
         git: "./src/logos/git.svg",
         github: "./src/logos/github-light.svg",

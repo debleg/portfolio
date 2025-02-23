@@ -8,8 +8,6 @@
   "soph-desc":"Course project</br>Based on an existing site and mockup, the login logic was implemented in javascript to allow the owner to update her showcase through a dedicated interface",
   "kasa-blurb":"Vacation rental application",
   "kasa-desc":"Course project</br> Based on an existing mockup, a React application was set up to allow users to select and view the details of the rental property of their choice",
-  "arba-blurb":"Online banking interface",
-  "arba-desc":"Course project</br>Based on an existing mockup, a user interface was set up, allowing changes to be retained through Redux",
   "pf-blurb":"My portfolio",
   "pf-desc":"The site you're visiting right now!</br>It is meant as a showcase of my abilities as a developer",
   "nina-blurb": "Photographer's portfolio website",

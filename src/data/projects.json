@@ -38,15 +38,6 @@
     "website": "https://debleg.github.io/OC-P8-Nina-Carducci/"
   },
   {
-    "id": "arba",
-    "name": "ArgentBank",
-    "blurb": "arba-blurb",
-    "tech": ["react","redux"],
-    "img": "",
-    "description": "arba-desc",
-    "repo": "https://github.com/debleg/OC-P10-ArgentBank-Frontend"
-  },
-  {
     "id": "portfolio",
     "name": "My portfolio",
     "blurb": "pf-blurb",

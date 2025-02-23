@@ -8,8 +8,6 @@
   "soph-desc":"Projet de formation </br>Sur la base d'un site et d'une maquette fournie, implémentation d'une logique de connexion et de mise à jour par l'utilisateur de la galerie de travaux par le biais d'une interface dédiée",
   "kasa-blurb":"Application de location immobilière",
   "kasa-desc":"Projet de formation</br>Sur la base d'une maquette existante, mise en place d'une interface permettant à l'utilisateur de sélectionner et visualiser la propriété qui l'intéresse",
-  "arba-blurb":"Interface d'une agence bancaire",
-  "arba-desc":"Projet de formation</br>Sur la base d'une maquette existante, mise en place grâce à React et Redux d'une interface utilisateur",
   "pf-blurb":"Mon portfolio",
   "pf-desc":"Ce site ! </br> J'y présente mon profil de développeur, au travers d'une sélection de projets",
   "nina-blurb": "Portfolio d'une photographe",
