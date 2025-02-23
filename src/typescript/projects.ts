@@ -29,7 +29,7 @@ export function projectsShowcase() {
     sass: "./src/logos/sass.svg",
     javascript: "./src/logos/javascript.svg",
     typescript: "./src/logos/typescript.svg",
-    react: "./src/logos/react.svg",
+    react: "./src/logos/react_dark.svg",
     lighthouse: "./src/logos/lighthouse.svg",
     redux: "./src/logos/redux.svg",
     sql: "./src/logos/sql.svg"
