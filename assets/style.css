@@ -215,7 +215,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5em;
+  gap: 0.5em;
+}
+@media screen and (min-width: 768px) {
+  .header__interact {
+    gap: 1.5em;
+  }
 }
 .header__menu--button {
   background: var(--background);
@@ -326,6 +331,36 @@ body {
   background-color: rgba(226, 238, 211, 0.1333333333);
   border-radius: 30px;
   border: 1px rgba(255, 255, 255, 0.2392156863) solid;
+}
+
+.locale-switcher {
+  background-color: inherit;
+  color: inherit;
+  border-radius: 10px;
+  height: 1.5em;
+  font-size: 1.25em;
+  font-weight: 600;
+  border: 1px solid var(--text);
+}
+.locale-switcher option[value=en],
+.locale-switcher option[value=fr] {
+  color: inherit;
+  background-color: var(--background);
+}
+
+@media screen and (min-width: 768px) {
+  .small-switch {
+    display: none;
+  }
+}
+
+.full-switch {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .full-switch {
+    display: block;
+  }
 }
 
 .footer {

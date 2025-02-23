@@ -31,7 +31,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5em;
+    gap: 0.5em;
+    @include responsive(tablet-min) {
+      gap: 1.5em;
+    }
   }
   &__menu {
     &--button {
@@ -81,7 +84,6 @@
     }
     &--listitem {
       list-style: none;
-
     }
     &--link {
       text-decoration: none;
@@ -127,7 +129,7 @@
 
 .custom-dialog {
   background-color: inherit;
-  color:inherit;
+  color: inherit;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -137,4 +139,33 @@
   background-color: #e2eed322; //works for dark theme!! ** #202c1133 for light theme? (or take text color with very low opacity)
   border-radius: 30px;
   border: 1px #ffffff3d solid; //for dark theme!!
+}
+
+.locale-switcher {
+  background-color: inherit; // keep here for firefox
+  color: inherit;
+  border-radius: 10px;
+  height: 1.5em;
+  font-size: 1.25em;
+  font-weight: 600;
+  border: 1px solid var(--text);
+
+  & option[value="en"],
+  option[value="fr"] {
+    //only way to have the dropdown have the right color, still looks odd in firefox, but remains legible
+    color: inherit;
+    background-color: var(--background);
+  }
+}
+
+.small-switch {
+  @include responsive(tablet-min) {
+    display: none;
+  }
+}
+.full-switch {
+  display: none;
+  @include responsive(tablet-min) {
+    display: block;
+  }
 }
