@@ -12,7 +12,6 @@ export function projectsShowcase() {
         lighthouse: "./src/logos/lighthouse.svg",
         figma: "./src/logos/figma.svg",
         git: "./src/logos/git.svg",
-        github: "./src/logos/github-light.svg",
         sql: "./src/logos/sql.svg"
     };
     /**
