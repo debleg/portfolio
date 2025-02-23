@@ -4,8 +4,6 @@
   @if $breakpoint == tablet-min {
     @media screen and (min-width: 768px) {
       @content;
-      $header-height: 40px;
-      $footer-height: 40px;
     }
   }
   @if $breakpoint == desktop {
@@ -15,36 +13,16 @@
   }
 }
 
-//layout-specific variables
-$header-height: 50px;
-$footer-height: 50px;
-
-$header-height-tablet: 60px;
-$footer-height-tablet: 60px;
-
-$header-height-desktop: 70px;
-$footer-height-desktop: 70px;
-
 // General Layout
 body {
   min-width: 320px;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   max-width: 1440px;
-  margin: auto;
-  //sticks the footer to the bottom if the content isn't enough to push it down
-  min-height: calc(100vh - ($header-height + $footer-height + 2em));
-  @include responsive(tablet-min) {
-    min-height: calc(
-      100vh - ($header-height-tablet + $footer-height-tablet + 2em)
-    );
-  }
-  @include responsive(desktop) {
-    min-height: calc(
-      100vh - ($header-height-desktop + $footer-height-desktop + 2em)
-    );
-  }
+  margin-inline: auto;
 }
 
 //navigation

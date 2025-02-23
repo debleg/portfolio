@@ -6,14 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: $footer-height;
+  height: 50px;
   border-radius: 30px;
+  margin-top: auto;
 
   @include responsive(tablet-min) {
-    height: $footer-height-tablet;
+    height: 60px;
   }
   @include responsive(desktop) {
-    height: $footer-height-desktop;
+    height: 70px;
   }
   &__copyright {
     font-weight: $fw-3;

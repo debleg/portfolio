@@ -6,14 +6,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: $header-height;
+  height: 50px;
   border-radius: 30px;
 
   @include responsive(tablet-min) {
-    height: $header-height-tablet;
+    height: 60px;
   }
   @include responsive(desktop) {
-    height: $header-height-desktop;
+    height: 70px;
   }
   &__logo {
     height: 40px;
