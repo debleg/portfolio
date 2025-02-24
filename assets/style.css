@@ -621,4 +621,15 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .project-dialog {
+    max-width: 768px;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    margin-inline: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }/*# sourceMappingURL=style.css.map */
