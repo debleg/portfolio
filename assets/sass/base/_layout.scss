@@ -25,6 +25,7 @@ body {
 
 main {
   max-width: 1440px;
+  width: 90%;
   margin-inline: auto;
 }
 
@@ -40,3 +41,20 @@ main {
     display: flex;
   }
 }
+
+//sections except about for now
+
+#projects, #skills, #contact {
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  & h2 {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 0.5em;
+  }
+}
+

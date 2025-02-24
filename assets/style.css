@@ -85,6 +85,7 @@ body:has(dialog[open]) {
 
 main {
   max-width: 1440px;
+  width: 90%;
   margin-inline: auto;
 }
 
@@ -101,6 +102,20 @@ main {
   .large-nav {
     display: flex;
   }
+}
+
+#projects, #skills, #contact {
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 10px;
+}
+#projects h2, #skills h2, #contact h2 {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 0.5em;
 }
 
 html {
@@ -425,12 +440,6 @@ body {
   transform: scale(1.2);
 }
 
-#skills {
-  width: 100%;
-  padding: 1em;
-  border-radius: 10px;
-}
-
 .tech-skills {
   display: grid;
   gap: 10px 10px;
@@ -482,4 +491,50 @@ body {
 
 .close-dialog {
   margin-left: auto;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* @use "./../base" as *;
+
+.project-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 2em;
+  column-gap: 1em;
+  justify-items: center;
+  padding: 0 0.5em;
+  .project {
+    min-width: 250px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5em;
+    padding: 1em;
+    &__title {
+      font-size: larger;
+      text-align: center;
+
+    }
+    &__tech {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &--img{
+        width: auto;
+      height: 30px;
+      }
+    }
+    &__blurb {
+      max-width: 200px;
+      text-align: center;
+    }
+    &__button {
+      border-radius: 10px;
+      color: inherit;
+      border: none;
+      padding: 0.5em;
+    }
+  }
+}
+ *//*# sourceMappingURL=style.css.map */
