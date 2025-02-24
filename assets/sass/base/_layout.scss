@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   &:has(dialog[open]) {
     overflow: hidden;
-}
+  }
 }
 
 main {
@@ -44,7 +44,9 @@ main {
 
 //sections except about for now
 
-#projects, #skills, #contact {
+#projects,
+#skills,
+#contact {
   width: 100%;
   margin-inline: auto;
   margin-top: 1em;
@@ -58,3 +60,15 @@ main {
   }
 }
 
+.contact__text {
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0.5em;
+  & > p {
+    padding-bottom: 0.5em;
+  }
+  + .lucide-leaf {
+    display: block;
+    margin: auto;
+  }
+}

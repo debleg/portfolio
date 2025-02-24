@@ -109,7 +109,9 @@ main {
   }
 }
 
-#projects, #skills, #contact {
+#projects,
+#skills,
+#contact {
   width: 100%;
   margin-inline: auto;
   margin-top: 1em;
@@ -117,10 +119,25 @@ main {
   padding: 1em;
   border-radius: 10px;
 }
-#projects h2, #skills h2, #contact h2 {
+#projects h2,
+#skills h2,
+#contact h2 {
   display: flex;
   gap: 8px;
   padding-bottom: 0.5em;
+}
+
+.contact__text {
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0.5em;
+}
+.contact__text > p {
+  padding-bottom: 0.5em;
+}
+.contact__text + .lucide-leaf {
+  display: block;
+  margin: auto;
 }
 
 html {

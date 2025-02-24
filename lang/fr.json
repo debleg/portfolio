@@ -13,5 +13,6 @@
   "nina-blurb": "Portfolio d'une photographe",
   "nina-desc": "Projet de formation</br>Sur la base d'un site existant, optimisation du référencement (SEO), des performances et de l'accessibilité grâce à des outils comme Google Lighthouse et Wave",
   "skills": "Compétences",
-  "contact": "Contact"
+  "contact": "Contact",
+  "contact-text": "<p>Vous avez des projets ? Vous souhaitez échanger ? N'hésitez pas à me contacter, cliquez sur l'enveloppe ci-dessous pour copier mon email !</p><p>Merci d'avoir feuilleté mon portfolio !</p>"
 }
