@@ -246,8 +246,13 @@ body {
 .header__menu--dialog {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  padding-block: 5em;
+}
+@media screen and (min-width: 768px) {
+  .header__menu--dialog {
+    padding-block: 1em;
+  }
 }
 .header__menu--list {
   list-style: none;
@@ -297,11 +302,17 @@ body {
   margin-right: 0.5em;
 }
 
-#menu-dialog {
+#dialog__menu {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
-#menu-dialog .footer__connect {
+@media screen and (min-width: 768px) {
+  #dialog__menu {
+    font-size: 1.5em;
+  }
+}
+#dialog__menu .footer__connect {
   margin-top: auto;
   display: flex;
   justify-content: space-around;

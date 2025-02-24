@@ -63,8 +63,11 @@
     &--dialog {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
+      padding-block: 5em;
+      @include responsive(tablet-min){
+        padding-block: 1em;
+      }
     }
     &--list {
       list-style: none;
@@ -115,9 +118,13 @@
   }
 }
 
-#menu-dialog {
+#dialog__menu {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  @include responsive(tablet-min){
+    font-size: 1.5em;
+  }
   & .footer__connect {
     margin-top: auto;
     display: flex;
