@@ -2,14 +2,14 @@
 // for menu fine-tuning see header file
 .dialog {
   box-sizing: content-box;
-  background-color: #e2eed322;
+  background-color: inherit;
   color: inherit;
   position: absolute;
   height: 100vh;
   width: 100vw;
-  backdrop-filter: blur(15px);
-  --webkit-backdrop-filter: blur(15px);
-  --moz-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  --moz-backdrop-filter: blur(10px);
   border-radius: 30px;
   border: 2px #ffffff3d solid;
 }

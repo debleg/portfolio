@@ -474,15 +474,15 @@ body {
 
 .dialog {
   box-sizing: content-box;
-  background-color: rgba(226, 238, 211, 0.1333333333);
+  background-color: inherit;
   color: inherit;
   position: absolute;
   height: 100vh;
   width: 100vw;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  --webkit-backdrop-filter: blur(15px);
-  --moz-backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  --webkit-backdrop-filter: blur(10px);
+  --moz-backdrop-filter: blur(10px);
   border-radius: 30px;
   border: 2px rgba(255, 255, 255, 0.2392156863) solid;
 }
