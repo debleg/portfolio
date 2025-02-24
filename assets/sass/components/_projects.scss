@@ -7,8 +7,10 @@
   column-gap: 1em;
   justify-items: center;
   padding: 0 0.5em;
+  margin: 1em 0;
   .project {
     min-width: 250px;
+    min-height: 300px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -17,8 +19,25 @@
     gap: 0.5em;
     padding: 1em;
     &__title {
-      font-size: larger;
+      font-weight: 500;
+      font-size: 1.7em;
       text-align: center;
+      border-bottom: 1px solid var(--text);
+    }
+    &__techs {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0.5em;
+      border-radius: 10px;
+      padding: 0.5em;
+    }
+
+    &__blurb {
+      max-width: 200px;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 300;
     }
     &__tech {
       display: flex;
@@ -26,18 +45,52 @@
       align-items: center;
       &--img {
         width: auto;
-        height: 30px;
+        height: 25px;
       }
-    }
-    &__blurb {
-      max-width: 200px;
-      text-align: center;
     }
     &__button {
       border-radius: 10px;
       color: inherit;
       border: none;
       padding: 0.5em;
+      font-size: 1.6em;
+      margin-top: 0.5em;
     }
+  }
+}
+
+.light .project__button:hover {
+  background: #e2eed3;
+  box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
+  transform: scale(1.1);
+}
+.dark .project__button:hover {
+  background: #202c11;
+  box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
+  transform: scale(1.1);
+}
+
+.project-dialog {
+}
+
+.project {
+  &__close {
+    border-radius: 10px;
+    color: inherit;
+    border: none;
+    > svg {
+      padding-top: 0.3em;
+      height: 30px;
+      width: auto;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &__cover {
+  }
+  &__desc {
+  }
+  &__link {
   }
 }

@@ -76,3 +76,7 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* Buttons should be easy to spot for general UX and accessibility*/
+button {
+  cursor: pointer;
+}

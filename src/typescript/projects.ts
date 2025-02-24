@@ -74,33 +74,37 @@ export function projectsShowcase() {
         projectName.innerText = project.name;
         projectItem.appendChild(projectName);
 
-        //the tech is optional, loop through the logo list to find relevant ones
-        if (project.tech) {
-          project.tech.forEach((techLogo) => {
-            //wrap logos in a div, even if there's only one, for styling purposes
-            const projectTechs = document.createElement("div");
-            projectTechs.className = "project__tech";
-            const projectTech = document.createElement("img");
-            projectTech.src = techLogos[techLogo];
-            projectTech.alt = techLogo;
-
-            projectTech.className = "project__tech--img";
-            projectTechs.appendChild(projectTech);
-            projectItem.appendChild(projectTechs);
-          });
-        }
 
         const projectBlurb = document.createElement("p");
         projectBlurb.className = "project__blurb";
         projectBlurb.setAttribute("data-i18n-key", project.blurb);
         projectItem.appendChild(projectBlurb);
 
+        //the tech is optional, loop through the logo list to find relevant ones
+        if (project.tech) {
+          const projectTechsContainer = document.createElement("div");
+          projectTechsContainer.className="project__techs neumorphism-base"
+          project.tech.forEach((techLogo) => {
+            //wrap logos in a div, even if there's only one, for styling purposes
+            const projectTechs = document.createElement("div");
+            projectTechs.className = "project__tech";
+            const projectTech = document.createElement("img");
+            projectTech.src = techLogos[techLogo];
+            projectTech.alt = `Logo ${techLogo}`;
+
+            projectTech.className = "project__tech--img";
+            projectTechs.appendChild(projectTech);
+            projectTechsContainer.appendChild(projectTech);
+          });
+          projectItem.appendChild(projectTechsContainer)
+        }
+
         //the open button is in the main div
         const openButton = document.createElement("button");
         openButton.classList.add(
           "open-dialog",
           "project__button",
-          "neumorphism-base"
+          "neumorphism-raised"
         );
         openButton.setAttribute(
           "data-dialog-target",
@@ -148,9 +152,13 @@ export function projectsShowcase() {
         projectDesc.setAttribute("data-i18n-key", project.description);
         modal.appendChild(projectDesc);
 
+//link container
+        const projectLinks = document.createElement("div")
+        projectLinks.className = "project__links"
+
         //setting up the repo link with lucide icon
         const projectRepo = document.createElement("a");
-        projectRepo.className = "project__link--repo";
+        projectRepo.className = "project__links--repo";
         projectRepo.href = project.repo;
         projectRepo.target = "_blank";
         projectRepo.setAttribute("aria-label", "Github Code");
@@ -158,12 +166,12 @@ export function projectsShowcase() {
         projectRepoIcon.setAttribute("data-lucide", "github");
         projectRepoIcon.setAttribute("aria-hidden", "true");
         projectRepo.appendChild(projectRepoIcon);
-        modal.appendChild(projectRepo);
+        projectLinks.appendChild(projectRepo);
 
         //the project website is optional, not all projects are deployed, lucide icon used
         if (project.website) {
           const projectSite = document.createElement("a");
-          projectSite.className = "project__link--website";
+          projectSite.className = "project__links--website";
           projectSite.href = project.website;
           projectSite.target = "_blank";
           projectSite.setAttribute("aria-label", "website");
@@ -171,8 +179,9 @@ export function projectsShowcase() {
           projectSiteIcon.setAttribute("data-lucide", "link");
           projectSiteIcon.setAttribute("aria-hidden", "true");
           projectSite.appendChild(projectSiteIcon);
-          modal.appendChild(projectSite);
+          projectLinks.appendChild(projectSite);
         }
+        modal.appendChild(projectLinks)
 
         projectDiv?.appendChild(projectItem);
         lucide.createIcons(); //called here or else the icons in the modals don't show

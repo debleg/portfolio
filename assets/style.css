@@ -74,6 +74,11 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* Buttons should be easy to spot for general UX and accessibility*/
+button {
+  cursor: pointer;
+}
+
 body {
   min-width: 320px;
   display: flex;
@@ -144,6 +149,10 @@ body {
   background: #e2eed3;
   box-shadow: 4px 4px 10px #d0dbc2, -4px -4px 10px #f4ffe4;
 }
+.light .neumorphism-raised-hover {
+  background: #e2eed3;
+  box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
+}
 
 .dark {
   --text: hsl(44, 100%, 85%);
@@ -161,6 +170,10 @@ body {
 .dark .neumorphism-raised {
   background: #202c11;
   box-shadow: 4px 4px 10px #17200c, -4px -4px 10px #293816;
+}
+.dark .neumorphism-raised-hover {
+  background: #202c11;
+  box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
 }
 
 body {
@@ -486,9 +499,11 @@ body {
        column-gap: 1em;
   justify-items: center;
   padding: 0 0.5em;
+  margin: 1em 0;
 }
 .project-showcase .project {
   min-width: 250px;
+  min-height: 300px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -498,8 +513,24 @@ body {
   padding: 1em;
 }
 .project-showcase .project__title {
-  font-size: larger;
+  font-weight: 500;
+  font-size: 1.7em;
   text-align: center;
+  border-bottom: 1px solid var(--text);
+}
+.project-showcase .project__techs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+.project-showcase .project__blurb {
+  max-width: 200px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 300;
 }
 .project-showcase .project__tech {
   display: flex;
@@ -508,15 +539,39 @@ body {
 }
 .project-showcase .project__tech--img {
   width: auto;
-  height: 30px;
-}
-.project-showcase .project__blurb {
-  max-width: 200px;
-  text-align: center;
+  height: 25px;
 }
 .project-showcase .project__button {
   border-radius: 10px;
   color: inherit;
   border: none;
   padding: 0.5em;
+  font-size: 1.6em;
+  margin-top: 0.5em;
+}
+
+.light .project__button:hover {
+  background: #e2eed3;
+  box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
+  transform: scale(1.1);
+}
+
+.dark .project__button:hover {
+  background: #202c11;
+  box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
+  transform: scale(1.1);
+}
+
+.project__close {
+  border-radius: 10px;
+  color: inherit;
+  border: none;
+}
+.project__close > svg {
+  padding-top: 0.3em;
+  height: 30px;
+  width: auto;
+}
+.project__close:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */
