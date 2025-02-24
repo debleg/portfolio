@@ -167,15 +167,3 @@
     background-color: var(--background);
   }
 }
-
-.small-switch {
-  @include responsive(tablet-min) {
-    display: none;
-  }
-}
-.full-switch {
-  display: none;
-  @include responsive(tablet-min) {
-    display: block;
-  }
-}

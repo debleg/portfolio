@@ -369,21 +369,6 @@ body {
   background-color: var(--background);
 }
 
-@media screen and (min-width: 768px) {
-  .small-switch {
-    display: none;
-  }
-}
-
-.full-switch {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .full-switch {
-    display: block;
-  }
-}
-
 .footer {
   margin: 1em;
   padding: 1em;
