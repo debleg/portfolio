@@ -493,10 +493,10 @@ body {
 
 .project-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   row-gap: 2em;
-  -moz-column-gap: 1em;
-       column-gap: 1em;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
   justify-items: center;
   padding: 0 0.5em;
   margin: 1em 0;
@@ -562,10 +562,22 @@ body {
   transform: scale(1.1);
 }
 
+.project-dialog {
+  height: 100vh;
+}
+
+.project__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em;
+}
 .project__close {
   border-radius: 10px;
   color: inherit;
   border: none;
+  margin-bottom: 2em;
 }
 .project__close > svg {
   padding-top: 0.3em;
@@ -574,4 +586,22 @@ body {
 }
 .project__close:hover {
   transform: scale(1.2);
+}
+.project__cover {
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1em;
+}
+.project__desc {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 1em;
+}
+.project__links {
+  margin-top: 2em;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

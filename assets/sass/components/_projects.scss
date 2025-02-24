@@ -2,9 +2,9 @@
 
 .project-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   row-gap: 2em;
-  column-gap: 1em;
+  column-gap: 2em;
   justify-items: center;
   padding: 0 0.5em;
   margin: 1em 0;
@@ -71,15 +71,24 @@
 }
 
 .project-dialog {
+    height:100vh;//change maybe on larger screen to have something smaller in both direction
 }
 
 .project {
+    &__modal {
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+margin: 1em;
+    }
   &__close {
     border-radius: 10px;
     color: inherit;
     border: none;
+    margin-bottom: 2em;
     > svg {
-      padding-top: 0.3em;
+      padding-top: 0.3em;  
       height: 30px;
       width: auto;
     }
@@ -88,9 +97,22 @@
     }
   }
   &__cover {
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 1em;
+    
   }
   &__desc {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 1em;
   }
-  &__link {
+  &__links {
+    margin-top: 2em;
+    width: 50%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
   }
 }

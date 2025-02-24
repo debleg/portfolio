@@ -33,7 +33,7 @@ export function projectsShowcase() {
     lighthouse: "./src/logos/lighthouse.svg",
     figma: "./src/logos/figma.svg",
     git: "./src/logos/git.svg",
-    sql: "./src/logos/sql.svg"
+    sql: "./src/logos/sql.svg",
   };
 
   /**
@@ -74,7 +74,6 @@ export function projectsShowcase() {
         projectName.innerText = project.name;
         projectItem.appendChild(projectName);
 
-
         const projectBlurb = document.createElement("p");
         projectBlurb.className = "project__blurb";
         projectBlurb.setAttribute("data-i18n-key", project.blurb);
@@ -83,7 +82,7 @@ export function projectsShowcase() {
         //the tech is optional, loop through the logo list to find relevant ones
         if (project.tech) {
           const projectTechsContainer = document.createElement("div");
-          projectTechsContainer.className="project__techs neumorphism-base"
+          projectTechsContainer.className = "project__techs neumorphism-base";
           project.tech.forEach((techLogo) => {
             //wrap logos in a div, even if there's only one, for styling purposes
             const projectTechs = document.createElement("div");
@@ -96,7 +95,7 @@ export function projectsShowcase() {
             projectTechs.appendChild(projectTech);
             projectTechsContainer.appendChild(projectTech);
           });
-          projectItem.appendChild(projectTechsContainer)
+          projectItem.appendChild(projectTechsContainer);
         }
 
         //the open button is in the main div
@@ -123,6 +122,10 @@ export function projectsShowcase() {
           modalDiv.appendChild(modal);
         }
 
+        //container for the modal content for styling purposes
+        const modalInnerContainer = document.createElement("div");
+        modalInnerContainer.className = "project__modal";
+
         const closeButton = document.createElement("button");
         closeButton.classList.add(
           "close-dialog",
@@ -138,27 +141,26 @@ export function projectsShowcase() {
         closeButtonIcon.setAttribute("data-lucide", "x");
         closeButtonIcon.setAttribute("aria-hidden", "true");
         closeButton.appendChild(closeButtonIcon);
-        modal.appendChild(closeButton);
+        modalInnerContainer.appendChild(closeButton);
 
         const projectCover = document.createElement("img");
         projectCover.className = "project__cover";
         projectCover.src = project.img;
         projectCover.alt = `website ${project.name}`;
-        modal.appendChild(projectCover);
+        modalInnerContainer.appendChild(projectCover);
 
         //the description is i18n: fields must exist in lang data!
         const projectDesc = document.createElement("div");
         projectDesc.className = "project__desc";
         projectDesc.setAttribute("data-i18n-key", project.description);
-        modal.appendChild(projectDesc);
+        modalInnerContainer.appendChild(projectDesc);
 
-//link container
-        const projectLinks = document.createElement("div")
-        projectLinks.className = "project__links"
+        //link container
+        const projectLinks = document.createElement("div");
+        projectLinks.className = "project__links";
 
         //setting up the repo link with lucide icon
         const projectRepo = document.createElement("a");
-        projectRepo.className = "project__links--repo";
         projectRepo.href = project.repo;
         projectRepo.target = "_blank";
         projectRepo.setAttribute("aria-label", "Github Code");
@@ -171,7 +173,6 @@ export function projectsShowcase() {
         //the project website is optional, not all projects are deployed, lucide icon used
         if (project.website) {
           const projectSite = document.createElement("a");
-          projectSite.className = "project__links--website";
           projectSite.href = project.website;
           projectSite.target = "_blank";
           projectSite.setAttribute("aria-label", "website");
@@ -181,7 +182,8 @@ export function projectsShowcase() {
           projectSite.appendChild(projectSiteIcon);
           projectLinks.appendChild(projectSite);
         }
-        modal.appendChild(projectLinks)
+        modalInnerContainer.appendChild(projectLinks);
+        modal.appendChild(modalInnerContainer);
 
         projectDiv?.appendChild(projectItem);
         lucide.createIcons(); //called here or else the icons in the modals don't show

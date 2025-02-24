@@ -12,7 +12,7 @@ export function projectsShowcase() {
         lighthouse: "./src/logos/lighthouse.svg",
         figma: "./src/logos/figma.svg",
         git: "./src/logos/git.svg",
-        sql: "./src/logos/sql.svg"
+        sql: "./src/logos/sql.svg",
     };
     /**
      * Fetches projects from json file
@@ -82,6 +82,9 @@ export function projectsShowcase() {
                     //modal created in specific div at the bottom of the body before the scripts outside the complex nesting to handle it more easily + styling
                     modalDiv.appendChild(modal);
                 }
+                //container for the modal content for styling purposes
+                const modalInnerContainer = document.createElement("div");
+                modalInnerContainer.className = "project__modal";
                 const closeButton = document.createElement("button");
                 closeButton.classList.add("close-dialog", "project__close", "neumorphism-base");
                 closeButton.setAttribute("data-dialog-id", `project-dialog-${project.id}`);
@@ -90,23 +93,22 @@ export function projectsShowcase() {
                 closeButtonIcon.setAttribute("data-lucide", "x");
                 closeButtonIcon.setAttribute("aria-hidden", "true");
                 closeButton.appendChild(closeButtonIcon);
-                modal.appendChild(closeButton);
+                modalInnerContainer.appendChild(closeButton);
                 const projectCover = document.createElement("img");
                 projectCover.className = "project__cover";
                 projectCover.src = project.img;
                 projectCover.alt = `website ${project.name}`;
-                modal.appendChild(projectCover);
+                modalInnerContainer.appendChild(projectCover);
                 //the description is i18n: fields must exist in lang data!
                 const projectDesc = document.createElement("div");
                 projectDesc.className = "project__desc";
                 projectDesc.setAttribute("data-i18n-key", project.description);
-                modal.appendChild(projectDesc);
+                modalInnerContainer.appendChild(projectDesc);
                 //link container
                 const projectLinks = document.createElement("div");
                 projectLinks.className = "project__links";
                 //setting up the repo link with lucide icon
                 const projectRepo = document.createElement("a");
-                projectRepo.className = "project__links--repo";
                 projectRepo.href = project.repo;
                 projectRepo.target = "_blank";
                 projectRepo.setAttribute("aria-label", "Github Code");
@@ -118,7 +120,6 @@ export function projectsShowcase() {
                 //the project website is optional, not all projects are deployed, lucide icon used
                 if (project.website) {
                     const projectSite = document.createElement("a");
-                    projectSite.className = "project__links--website";
                     projectSite.href = project.website;
                     projectSite.target = "_blank";
                     projectSite.setAttribute("aria-label", "website");
@@ -128,7 +129,8 @@ export function projectsShowcase() {
                     projectSite.appendChild(projectSiteIcon);
                     projectLinks.appendChild(projectSite);
                 }
-                modal.appendChild(projectLinks);
+                modalInnerContainer.appendChild(projectLinks);
+                modal.appendChild(modalInnerContainer);
                 projectDiv?.appendChild(projectItem);
                 lucide.createIcons(); //called here or else the icons in the modals don't show
             });
