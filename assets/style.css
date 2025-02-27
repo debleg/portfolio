@@ -514,8 +514,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.tech-skill__item--logo > svg {
   height: 40px;
   width: auto;
 }
