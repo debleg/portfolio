@@ -43,9 +43,10 @@ export function techSkillsShowcase() {
         const skillItem = document.createElement("div");
         skillItem.className = "tech-skill__item neumorphism-raised";
         
-        const skillLogo = document.createElement("div");
+        const skillLogo = document.createElement("img");
         skillLogo.className = "tech-skill__item--logo";
-        skillLogo.innerHTML = tech.img;
+        skillLogo.src = tech.img;
+        skillLogo.alt = `${tech.name} logo`
 
         const skillName = document.createElement("p");
         skillName.className = "tech-skill__item--name";
