@@ -6,11 +6,8 @@ export function themeHandling() {
   const themeToggleInput = document.getElementById(
     "theme-toggle"
   ) as HTMLInputElement | null;
-  const lightLabel = document.querySelector(
-    ".to-light-theme"
-  ) as HTMLElement | null;
-  const darkLabel = document.querySelector(
-    ".to-dark-theme"
+  const label = document.querySelector(
+    ".theme-toggle-label"
   ) as HTMLElement | null;
   const body = document.body;
 
@@ -53,16 +50,16 @@ export function themeHandling() {
     }
   }
 
-  //due to visually hidden and tab index -1 the checkbox itself can't be used as target, the labels are what the user interacts with instead
-  [lightLabel, darkLabel].forEach((label) => {
-    label?.addEventListener("click", toggleTheme);
+  //due to visually hidden and tab index -1 the checkbox itself can't be used as target, the label is what the user interacts with instead with a tabindex of 0
+  if (label) {
+    label.addEventListener("click", toggleTheme);
 
     //for keyboard accessibility
-    label?.addEventListener("keydown", (event) => {
+    label.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault(); //no scroll on space bar press
         toggleTheme();
       }
-    });
-  });
+    }); // <-- Add this closing parenthesis
+  }
 }
