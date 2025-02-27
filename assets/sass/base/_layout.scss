@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 // Responsive mixin
 
 @mixin responsive($breakpoint) {
@@ -56,8 +58,10 @@ main {
   & h2 {
     display: flex;
     gap: 8px;
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    width: fit-content;
     font-size: 1.6em;
+    border-bottom: 2px solid var(--accent);
   }
 }
 
@@ -71,5 +75,9 @@ main {
   + .lucide-leaf {
     display: block;
     margin: auto;
+    color: var(--accent);
+    fill: var(--accent);
+    height: 32px;
+    width: 32px;
   }
 }

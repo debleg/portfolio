@@ -22,7 +22,7 @@
       font-weight: 600;
       font-size: 1.7em;
       text-align: center;
-      border-bottom: 1px solid var(--text);
+      border-bottom: 2px dashed var(--accent);
     }
     &__techs {
       display: flex;

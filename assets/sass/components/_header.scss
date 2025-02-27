@@ -104,7 +104,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: var(--text);
+        background-color: var(--accent);
         transition: width 0.2s ease-in;
       }
       &:hover::after {
@@ -145,6 +145,7 @@
 
 // Theme toggle handling
 .theme-toggle-icon {
+  fill: var(--accent);
   @include responsive(tablet-min) {
     height: 35px;
     width: auto;
@@ -164,7 +165,7 @@
   border-radius: 10px;
   font-size: 1.25em;
   font-weight: 600;
-  border: 1px solid var(--text);
+  border: 2px solid var(--accent);
   cursor: pointer;
   @include responsive(desktop) {
     font-size: 1.4em;
