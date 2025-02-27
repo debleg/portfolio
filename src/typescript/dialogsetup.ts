@@ -35,4 +35,22 @@ export function setupDialogListeners() {
       }
     }
   });
+
+
+  //the following allow clicking on a menu link to be redirected to a different section of the page without the dialog remaining open and preventing scroll
+  const menuDialog = document.getElementById(
+    "menu-dialog"
+  ) as HTMLDialogElement | null;
+
+  const menuInternalLinks = document.querySelectorAll<HTMLAnchorElement>(
+    "#menu-dialog .header__menu--link"
+  );
+
+  menuInternalLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (menuDialog) {
+        menuDialog.close();
+      }
+    });
+  });
 }
