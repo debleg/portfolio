@@ -80,3 +80,13 @@ textarea:not([rows]) {
 button {
   cursor: pointer;
 }
+
+//scrollbar
+
+* {
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px; //thin
+}

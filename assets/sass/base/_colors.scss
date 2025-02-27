@@ -14,7 +14,8 @@
     background: #e2eed3;
     box-shadow: 4px 4px 10px #d0dbc2, -4px -4px 10px #f4ffe4;
   }
-  .neumorphism-raised-hover { //here for reference, used in projects on discover button
+  .neumorphism-raised-hover {
+    //here for reference, used in projects on discover button
     background: #e2eed3;
     box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
   }
@@ -22,7 +23,7 @@
 
 .dark {
   --text: hsl(44, 100%, 85%);
-  --background: hsl(87, 44%, 12%);
+  --background: hsl(87, 61%, 15%);
   --primary: hsl(53, 100%, 5%);
   --logo-background: var(--text);
   .to-dark-theme {
@@ -33,10 +34,11 @@
     box-shadow: inset 5px 5px 10px #0d1207, inset -5px -5px 10px #33461b;
   }
   .neumorphism-raised {
-    background: #202c11;
+    background: var(--background);
     box-shadow: 4px 4px 10px #17200c, -4px -4px 10px #293816;
   }
-  .neumorphism-raised-hover { //here for reference, used in projects on discover button
+  .neumorphism-raised-hover {
+    //here for reference, used in projects on discover button
     background: #202c11;
     box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
   }

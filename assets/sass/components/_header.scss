@@ -64,8 +64,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-block: 5em;
-      @include responsive(tablet-min){
+      padding-block: 3em;
+      @include responsive(tablet-min) {
         padding-block: 1em;
       }
     }
@@ -87,8 +87,8 @@
     }
     &--listitem {
       list-style: none;
-      font-size: 1.5em;
-      font-weight: $fw-3;
+      font-size: 1.6em;
+      font-weight: 500;
     }
     &--link {
       text-decoration: none;
@@ -113,6 +113,10 @@
       & svg {
         margin-top: 0.1em;
         margin-right: 0.5em;
+        @include responsive(tablet-min) {
+          height: 32px;
+          width: 32px;
+        }
       }
     }
   }
@@ -122,7 +126,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  @include responsive(tablet-min){
+  @include responsive(tablet-min) {
     font-size: 1.5em;
   }
   & .footer__connect {
@@ -130,6 +134,12 @@
     display: flex;
     justify-content: space-around;
     padding: 2em;
+    & .lucide {
+      @include responsive(tablet-min) {
+        height: 32px;
+        width: 32px;
+      }
+    }
   }
 }
 
@@ -152,10 +162,10 @@
   background-color: inherit; // keep here for firefox
   color: inherit;
   border-radius: 10px;
-  height: 1.5em;
   font-size: 1.25em;
   font-weight: 600;
   border: 1px solid var(--text);
+  cursor: pointer;
   @include responsive(desktop) {
     font-size: 1.4em;
   }
@@ -165,5 +175,8 @@
     //only way to have the dropdown have the right color, still looks odd in firefox, but remains legible
     color: inherit;
     background-color: var(--background);
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }

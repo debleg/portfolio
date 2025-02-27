@@ -1,8 +1,10 @@
+@use "./../base" as *;
+
 //insures base for mobile menu and projects is the same
 // for menu fine-tuning see header file
 .dialog {
   box-sizing: content-box;
-  background-color: inherit;
+  background-color: transparent;
   color: inherit;
   position: absolute;
   height: 100vh;
@@ -11,7 +13,12 @@
   --webkit-backdrop-filter: blur(10px);
   --moz-backdrop-filter: blur(10px);
   border-radius: 30px;
-  border: 2px #ffffff3d solid;
+  border: 1px var(--text) solid;
+}
+::backdrop {
+  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
+  --moz-backdrop-filter: blur(2px);
 }
 
 .close-dialog {
