@@ -82,8 +82,9 @@ main {
   }
   + .lucide-leaf {
     display: block;
-    margin: auto;
-    color: var(--accent);
+    margin-inline: auto;
+    margin-bottom: 0.5em;
+    color: var(--text);
     fill: var(--accent);
     height: 32px;
     width: 32px;
