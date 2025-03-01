@@ -15,16 +15,29 @@
   @include responsive(desktop) {
     height: 70px;
   }
-  &__logo {
-    height: 40px;
-    width: auto;
-    background: radial-gradient(var(--logo-background) 20%, transparent 70%);
-    border-radius: 10px;
+  > .lucide-lamp-desk {
+    fill: var(--accent);
     @include responsive(tablet-min) {
-      height: 50px;
+      height: 32px;
+      width: 32px;
+    }
+  }
+  &__portfolio {
+    font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif;
+    font-size: 1.6em;
+
+    @include responsive(tablet-min) {
+      font-size: 1.8em;
     }
     @include responsive(desktop) {
-      height: 60px;
+      font-size: 2em;
+    }
+    > span {
+      display: none;
+      @include responsive(tablet-min) {
+        display: initial;
+      }
     }
   }
   &__interact {

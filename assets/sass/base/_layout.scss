@@ -1,4 +1,4 @@
-@use 'colors' as *;
+@use "colors" as *;
 
 // Responsive mixin
 
@@ -57,11 +57,19 @@ main {
   border-radius: 10px;
   & h2 {
     display: flex;
-    gap: 8px;
+    gap: 4px;
     margin-bottom: 0.5em;
     width: fit-content;
-    font-size: 1.6em;
+    font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
     border-bottom: 2px solid var(--accent);
+    .lucide {
+      height: 32px;
+      width: 32px;
+      padding: 4px;
+    }
   }
 }
 
