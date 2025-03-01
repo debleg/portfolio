@@ -35,9 +35,13 @@
 
     &__blurb {
       max-width: 200px;
+      min-height: 120px;
       text-align: center;
       font-size: 1.5em;
       font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &__tech {
       display: flex;
