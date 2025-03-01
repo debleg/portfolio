@@ -21,6 +21,10 @@
       height: 32px;
       width: 32px;
     }
+    @include responsive(desktop){
+      height: 40px;
+      width: 40px;
+    }
   }
   &__portfolio {
     font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
