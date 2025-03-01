@@ -651,18 +651,19 @@ body {
   padding: 0.5em;
   font-size: 1.6em;
   margin-top: 0.5em;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
 }
 
 .light .project__button:hover {
   background: #e2eed3;
   box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .dark .project__button:hover {
   background: var(--background);
   box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-dialog {
