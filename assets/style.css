@@ -652,7 +652,7 @@ body {
   padding: 0.5em;
   font-size: 1.6em;
   margin-top: 0.5em;
-  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  transition: transform 200ms ease-out;
 }
 
 .light .project__button:hover {
