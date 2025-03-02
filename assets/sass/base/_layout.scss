@@ -73,6 +73,13 @@ main {
   }
 }
 
+h1 {
+  text-shadow: 4px -2px var(--accent);
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 600;
+}
+
 .contact__text {
   font-size: 1.3em;
   font-weight: 500;

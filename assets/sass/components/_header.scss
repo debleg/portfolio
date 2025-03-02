@@ -2,7 +2,7 @@
 
 .header {
   margin: 1em;
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,6 +10,7 @@
   border-radius: 30px;
 
   @include responsive(tablet-min) {
+    padding: 1em;
     height: 60px;
   }
   @include responsive(desktop) {
@@ -21,7 +22,7 @@
       height: 32px;
       width: 32px;
     }
-    @include responsive(desktop){
+    @include responsive(desktop) {
       height: 40px;
       width: 40px;
     }
@@ -30,6 +31,7 @@
     font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
       sans-serif;
     font-size: 1.6em;
+    text-shadow: 2px 2px var(--accent);
 
     @include responsive(tablet-min) {
       font-size: 1.8em;
