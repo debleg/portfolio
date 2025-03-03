@@ -15,3 +15,10 @@ body {
     font-size: 1.125rem; //18px
 }
 
+em {
+    border-bottom: 2px solid var(--accent);
+}
+
+strong {
+    text-shadow: 3px -2px var(--accent);
+}
