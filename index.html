@@ -23,7 +23,11 @@
         <nav class="header__menu large-nav">
           <ul class="header__menu--list">
             <li class="header__menu--listitem">
-              <a href="#about" class="header__menu--link" data-i18n-key="about">
+              <a
+                href="#introduction"
+                class="header__menu--link"
+                data-i18n-key="introduction"
+              >
               </a>
             </li>
             <li class="header__menu--listitem">
@@ -100,12 +104,26 @@
       </div>
     </header>
     <main>
-      <h1>DebLeg</br><span data-i18n-key="main-title"></span></h1>
-      <section id="about">
-        <h2>
-          <i data-lucide="badge-info" aria-hidden="true"></i
-          ><span data-i18n-key="about"></span>
-        </h2>
+      <h1>DebLeg<br /><span data-i18n-key="main-title"></span></h1>
+      <section id="introduction">
+        <div class="intro__main--wrap">
+          <div class="intro__main--text">
+            <h2 class="intro__main--title" data-i18n-key="introduction"></h2>
+            <article
+              class="intro__main--content"
+              data-i18n-key="intro-base"
+            ></article>
+          </div>
+          <img class="intro__main--img" src="../src/Square dandelion.png" alt="Plante">
+          </div>
+          <aside class="intro__aside neumorphism-raised">
+            <p class="intro__aside--journey">
+              <a href="https://debleg.github.io/Coding-Journey/" target="_blank"
+                >Coding Journey</a
+              ><span data-i18n-key="intro-aside-journey"></span>
+            </p>
+          </aside>
+        </div>
       </section>
       <section id="projects" class="neumorphism-base">
         <h2>
@@ -142,7 +160,10 @@
             aria-hidden="true"
           ></i
         ></a>
-        <a href="https://www.linkedin.com/in/debleg/" aria-label="LinkedIn" target="_blank"
+        <a
+          href="https://www.linkedin.com/in/debleg/"
+          aria-label="LinkedIn"
+          target="_blank"
           ><i
             class="footer__connect--icon"
             data-lucide="linkedin"
@@ -176,9 +197,9 @@
           <nav class="header__menu--dialog">
             <ul class="header__menu--list">
               <li class="header__menu--listitem">
-                <a href="#about" class="header__menu--link">
+                <a href="#introduction" class="header__menu--link">
                   <i data-lucide="badge-info" aria-hidden="true"></i
-                  ><span data-i18n-key="about"></span>
+                  ><span data-i18n-key="introduction"></span>
                 </a>
               </li>
               <li class="header__menu--listitem">
@@ -209,7 +230,10 @@
                 aria-hidden="true"
               ></i
             ></a>
-            <a href="https://www.linkedin.com/in/debleg/" aria-label="LinkedIn" target="_blank"
+            <a
+              href="https://www.linkedin.com/in/debleg/"
+              aria-label="LinkedIn"
+              target="_blank"
               ><i
                 class="footer__connect--icon"
                 data-lucide="linkedin"
