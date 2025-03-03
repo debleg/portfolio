@@ -11,7 +11,7 @@
   "soph-desc":"<em>Projet de formation</em></br>Sur la base d'un site et d'une maquette fournie, implémentation avec <strong>Javascript</strong> d'une logique de connexion et de mise à jour par l'utilisateur de la galerie de travaux par le biais d'une interface dédiée",
   "kasa-blurb":"Application de location immobilière",
   "kasa-desc":"<em>Projet de formation</em></br>Sur la base d'une maquette existante, mise en place d'une application <strong>React</strong> dont l'interface permet à l'utilisateur de sélectionner et visualiser la propriété qui l'intéresse",
-  "pf-blurb":"Mon portfolio",
+  "pf-blurb":"Présentation de mes travaux",
   "pf-desc":"<em>Course project</em></br>Ce site ! </br> J'y présente mon profil de développeuse, au travers d'une sélection de projets. J'ai choisi d'utiliser <strong>Typescript</strong> pour la logique sous-jacente, et <strong>Sass</strong> pour le style.",
   "nina-blurb": "Portfolio d'une photographe",
   "nina-desc": "<em>Projet de formation</em></br>Sur la base d'un site existant, optimisation du <strong>référencement</strong> (<strong>SEO</strong>), des performances et de l'accessibilité grâce à des outils comme <strong>Google Lighthouse</strong> et l'extension <strong>Wave</strong>",

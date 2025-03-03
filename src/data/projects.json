@@ -39,7 +39,7 @@
   },
   {
     "id": "portfolio",
-    "name": "My portfolio",
+    "name": "Portfolio",
     "blurb": "pf-blurb",
     "tech": ["typescript", "sass"],
     "img": "./src/projects/portfolio-headerview.png",
