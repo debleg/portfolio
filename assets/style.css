@@ -101,12 +101,8 @@ button {
   box-shadow: #fff 0 1px 1px, rgba(0, 0, 0, 0.2) 0 1px 5px 0px inset;
 }
 .light .neumorphism-raised {
-  background: #e2eed3;
-  box-shadow: 4px 4px 10px #d0dbc2, -4px -4px 10px #f4ffe4;
-}
-.light .neumorphism-raised-hover {
-  background: #e2eed3;
-  box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
+  background: var(--background);
+  box-shadow: 3px 3px 0px #d0dbc2, -3px -3px 0px #f4ffe4;
 }
 
 .dark {
@@ -675,9 +671,8 @@ strong {
 }
 
 .light .project__button:hover {
-  background: #e2eed3;
-  box-shadow: 10px 10px 5px #d0dbc2, -10px -10px 5px #f4ffe4;
-  transform: scale(1.05);
+  background: var(--background);
+  transform: scale(1.1);
 }
 
 .dark .project__button:hover {
