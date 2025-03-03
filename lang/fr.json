@@ -1,6 +1,8 @@
 {
   "main-title": "Développeuse Front-End",
-  "about": "À propos",
+  "introduction": "Qui et pourquoi",
+  "intro-base":"<p>De nombreux chemins mènent au <strong>développement web</strong>. J'ai défriché le mien grâce à une <em>formation OpenClassrooms d'Intégrateur Développeur Web</em> et une curiosité naturelle, mais le choix de ce domaine n'est pas aléatoire.</p><p>En tant que <strong>polyglotte</strong>, passionnée par les motifs de toute sorte, <strong>l'apprentissage de nouveaux langages</strong> demande de la <em>pratique</em>, de la <em>répétition</em>, de la <em>discipline</em>.</p>",
+  "intro-aside-journey":" (en anglais uniquement) est un <em>devlog</em> qui documente mon apprentissage et me permet de regrouper les ressources et savoirs récoltés au fil du temps.",
   "projects": "Projets",
   "discover": "Découvrir",
   "oh-blurb": "Site de présentation et réservation de menus de restaurants",

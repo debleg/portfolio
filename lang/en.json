@@ -1,6 +1,8 @@
 {
   "main-title":"Front-End Developper",
-  "about": "About",
+  "introduction": "Who and Why",
+  "intro-base":"<p>There are many paths to <strong>web development</strong>. Mine led me to <em>exploring the languages</em> involved and ultimately taking <em>a course on Web Integration</em> with OpenClassrooms.</p><p>I'm a <strong>polyglot</strong> with a passion for patterns of all kinds, and that comes with the knowledge that <strong>learning new languages</strong> requires <em>practice</em>, <em>repetition</em> and <em>discipline</em>.</p>",
+  "intro-aside-journey":" is a <em>devlog</em> where I document my process and gather resources I come across.",
   "projects": "Projects",
   "discover": "Discover",
   "oh-blurb": "Restaurant menu showcase and booking website",
