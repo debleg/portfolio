@@ -42,7 +42,7 @@
     "name": "My portfolio",
     "blurb": "pf-blurb",
     "tech": ["typescript", "sass"],
-    "img": "",
+    "img": "./src/projects/portfolio-headerview.png",
     "description": "pf-desc",
     "repo": "https://github.com/debleg/portfolio",
     "website": "https://debleg.github.io/portfolio/"
