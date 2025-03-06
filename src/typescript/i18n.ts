@@ -3,7 +3,7 @@
  * Resulting preferences are stored in local storage
  * Default is set to French
  */
-export function i18nSetup() {
+export async function i18nSetup(): Promise<{ translatePage:() => void}> { //additions to prevent translation happening before elements are finished being created
   try {
     let defaultLocale: string;
     //the language stored in local storage if the visitor has already changed it
@@ -125,10 +125,11 @@ export function i18nSetup() {
       document.documentElement.setAttribute("lang", newLocale);
     }
 
-    //call functions here, are called in index when the Dom content is loaded, needed to make sure what needs translated gets generated first!
     setLocale(defaultLocale);
     bindLocaleSwitcher(defaultLocale);
+    return { translatePage }; //prevents projects from running last and not getting translated, see promise on index file
   } catch (error) {
     console.error("Error in i18nSetup:", error);
+    throw error; //so it doesn't return undefined and make typescript angry in index file
   }
 }
