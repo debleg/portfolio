@@ -43,7 +43,7 @@ export function projectsShowcase() {
                 fetchedProjects.forEach((project) => {
                     //creating the encapsulating div
                     const projectItem = document.createElement("div");
-                    projectItem.className = "project neumorphism-raised";
+                    projectItem.className = "project neumorphism-raised unfold";
                     const projectName = document.createElement("h3");
                     projectName.className = "project__title";
                     projectName.innerText = project.name;

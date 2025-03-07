@@ -9,10 +9,10 @@ import { unfoldSection } from "./unfoldAnimation.js";
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     themeHandling();
-    unfoldSection();
     //the following lines allow the projects promise to be done before the loaded translations are applied to prevent text-less areas
     const { translatePage } = await i18nSetup();
     await projectsShowcase();
+    unfoldSection();
     translatePage();
     setupDialogListeners();
   } catch (error) {
