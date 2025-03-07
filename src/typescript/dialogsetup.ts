@@ -19,6 +19,10 @@ export function setupDialogListeners() {
           dialogId
         ) as HTMLDialogElement | null;
         if (dialog) {
+          dialog.classList.add("bloom"); //add base animation class independently
+          setTimeout(() => {
+            dialog.classList.add("active"); //needs slight delay to trigger and show
+          }, 1);
           dialog.showModal();
         }
       }
@@ -31,11 +35,16 @@ export function setupDialogListeners() {
         const dialog = document.getElementById(
           dialogId
         ) as HTMLDialogElement | null;
-        if (dialog) dialog.close();
+        if (dialog) {
+          dialog.classList.remove("active"); //remove effect first so animation can play in the other direction
+          setTimeout(() => {
+            dialog.classList.remove("bloom");
+            dialog.close();
+          }, 320); //needs delay to happen, same as animation length in sass/css
+        }
       }
     }
   });
-
 
   //the following allow clicking on a menu link to be redirected to a different section of the page without the dialog remaining open and preventing scroll
   const menuDialog = document.getElementById(

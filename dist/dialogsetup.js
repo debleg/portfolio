@@ -15,6 +15,10 @@ export function setupDialogListeners() {
             if (dialogId) {
                 const dialog = document.getElementById(dialogId);
                 if (dialog) {
+                    dialog.classList.add("bloom"); //add base animation class independently
+                    setTimeout(() => {
+                        dialog.classList.add("active"); //needs slight delay to trigger and show
+                    }, 1);
                     dialog.showModal();
                 }
             }
@@ -24,8 +28,13 @@ export function setupDialogListeners() {
             const dialogId = closeButton.getAttribute("data-dialog-id");
             if (dialogId) {
                 const dialog = document.getElementById(dialogId);
-                if (dialog)
-                    dialog.close();
+                if (dialog) {
+                    dialog.classList.remove("active"); //remove effect first so animation can play in the other direction
+                    setTimeout(() => {
+                        dialog.classList.remove("bloom");
+                        dialog.close();
+                    }, 320); //needs delay to happen, same as animation length in sass/css
+                }
             }
         }
     });
