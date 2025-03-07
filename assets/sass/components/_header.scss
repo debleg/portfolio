@@ -28,8 +28,7 @@
     }
   }
   &__portfolio {
-    font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
+    font-family: $flower-font;
     font-size: 1.6em;
     text-shadow: 2px 2px var(--accent);
 

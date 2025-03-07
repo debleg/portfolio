@@ -1,4 +1,14 @@
 @use "colors" as *;
+@use "typography" as *;
+
+// Broadly layout related, contains the following:
+// - Responsive mixin
+// - General layout
+// - Global section and h1 styling
+// - Contact syling
+// - Animation styling (unfold and bloom)
+// - Back to top button
+
 
 // Responsive mixin
 
@@ -44,7 +54,7 @@ main {
   }
 }
 
-//sections except about for now
+//global section styling, introduction handled separately
 
 #projects,
 #skills,
@@ -60,8 +70,7 @@ main {
     gap: 4px;
     margin-bottom: 0.5em;
     width: fit-content;
-    font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
-      sans-serif;
+    font-family: $flower-font;
     font-weight: 400;
     font-size: 1.8em;
     border-bottom: 2px solid var(--accent);

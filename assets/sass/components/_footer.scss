@@ -17,7 +17,7 @@
     height: 70px;
   }
   &__copyright {
-    font-weight: $fw-3;
+    font-weight: 600;
     font-size: 1.125rem;
     padding-top: 0.1em;
     @include responsive(tablet-min) {

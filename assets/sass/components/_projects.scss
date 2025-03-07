@@ -53,8 +53,7 @@
       }
     }
     &__button {
-      font-family: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
-        sans-serif;
+      font-family: $flower-font;
       text-shadow: 2px 1px var(--accent);
       border-radius: 10px;
       color: inherit;
@@ -75,10 +74,6 @@
   background: var(--background);
   box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
   transform: scale(1.05);
-}
-
-.project-dialog {
-  height: 100vh; //change maybe on larger screen to have something smaller in both direction
 }
 
 .project {

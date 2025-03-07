@@ -1,8 +1,6 @@
 .light {
-  --text: hsl(44, 100%, 15%);
-  --background: hsl(87, 44%, 88%);
-  --primary: hsl(53, 100%, 95%);
-  --logo-background: var(--background);
+  --text: #4d3800;
+  --background: #e2eed3;
   .to-light-theme {
     display: none;
   }
@@ -17,10 +15,8 @@
 }
 
 .dark {
-  --text: hsl(44, 100%, 85%);
-  --background: hsl(87, 61%, 15%);
-  --primary: hsl(53, 100%, 5%);
-  --logo-background: var(--text);
+  --text: #ffebb3;
+  --background: #293e0f;
   .to-dark-theme {
     display: none;
   }
@@ -33,7 +29,7 @@
     box-shadow: 4px 4px 10px #17200c, -4px -4px 10px #293816;
   }
   .neumorphism-raised-hover {
-    //here for reference, used in projects on discover button
+    //here for reference, used in projects on discover button, no light equivalent on purpose
     background: #202c11;
     box-shadow: 10px 10px 5px #17200c, -10px -10px 5px #293816;
   }
@@ -51,6 +47,7 @@ body {
   cursor: pointer;
 }
 
+//for use for theme toggle checkbox (toggle action handled with label)
 .visually-hidden {
   position: absolute;
   width: 1px;

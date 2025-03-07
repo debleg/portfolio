@@ -1,24 +1,21 @@
-//font-weights
-$fw-0: 300; //light
-$fw-1: 400; //regular
-$fw-2: 500; //medium
-$fw-3: 600; //semibold
-$fw-4: 700; //bold
-  
+//Fonts
+$main-font: Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$flower-font: "Indie Flower", Rajdhani, "Segoe UI", Tahoma, Geneva, Verdana,
+  sans-serif; //main as backup
 
 html {
-    font-size: 100%; //16px
+  font-size: 100%; //16px
 }
 
 body {
-    font-family: Rajdhani,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.125rem; //18px
+  font-family: $main-font;
+  font-size: 1.125rem; //18px
 }
 
 em {
-    border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 strong {
-    text-shadow: 3px -2px var(--accent);
+  text-shadow: 3px -2px var(--accent);
 }
