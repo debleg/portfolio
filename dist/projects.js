@@ -99,6 +99,7 @@ export function projectsShowcase() {
                     projectCover.className = "project__cover";
                     projectCover.src = project.img;
                     projectCover.alt = `website ${project.name}`;
+                    projectCover.setAttribute("loading", "lazy");
                     modalInnerContainer.appendChild(projectCover);
                     //the description is i18n: fields must exist in lang data!
                     const projectDesc = document.createElement("div");

@@ -47,6 +47,7 @@ export function techSkillsShowcase() {
         skillLogo.className = "tech-skill__item--logo";
         skillLogo.src = tech.img;
         skillLogo.alt = `${tech.name} logo`
+        skillLogo.setAttribute("loading", "lazy");
 
         const skillName = document.createElement("p");
         skillName.className = "tech-skill__item--name";
