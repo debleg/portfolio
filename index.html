@@ -148,11 +148,11 @@
               data-i18n-key="intro-base"
             ></article>
           </div>
-          <img
-            class="intro__main--img"
-            src="./src/squaredandelion.webp"
-            alt="Plante"
-          />
+          <!--this is needed to reduce load on mobile since the image isn't used there but can't be lazy loaded since it's high up on desktop-->
+          <picture class="intro__main--img">
+            <source media="(min-width: 1280px)" srcset="./src/squaredandelion.webp">
+            <img  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Plante">
+          </picture>
         </div>
         <aside class="intro__aside neumorphism-raised unfold">
           <p class="intro__aside--journey">
