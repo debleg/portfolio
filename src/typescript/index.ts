@@ -21,3 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 techSkillsShowcase();
+
+//back to top logic
+
+const scrollToTop = document.getElementById("scrollToTop") as HTMLButtonElement;
+
+scrollToTop.onclick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
