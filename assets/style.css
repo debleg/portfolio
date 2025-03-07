@@ -237,6 +237,28 @@ h1 {
   width: 32px;
 }
 
+.unfold {
+  opacity: 0;
+  transform: scaleX(75%);
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+
+.unfold.active {
+  transform: scaleX(100%);
+  opacity: 1;
+}
+
+.bloom {
+  opacity: 0;
+  transform: scale(50%);
+  transition: opacity 320ms ease-in-out, transform 320ms ease-in-out;
+}
+
+.bloom.active {
+  transform: scale(100%);
+  opacity: 1;
+}
+
 html {
   font-size: 100%;
 }
