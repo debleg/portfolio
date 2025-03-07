@@ -1,5 +1,6 @@
 export function projectsShowcase() {
     return new Promise((resolve, reject) => {
+        //add promise, allows for functions to be chained in index so translation + modal listeners are triggered only once everything exists!
         const projectDiv = document.getElementById("project-showcase");
         const modalDiv = document.getElementById("modal-container");
         let projects = [];
@@ -44,15 +45,17 @@ export function projectsShowcase() {
                     //creating the encapsulating div
                     const projectItem = document.createElement("div");
                     projectItem.className = "project neumorphism-raised unfold";
+                    //creating the project title
                     const projectName = document.createElement("h3");
                     projectName.className = "project__title";
                     projectName.innerText = project.name;
                     projectItem.appendChild(projectName);
+                    //creating the project short description
                     const projectBlurb = document.createElement("p");
                     projectBlurb.className = "project__blurb";
                     projectBlurb.setAttribute("data-i18n-key", project.blurb);
                     projectItem.appendChild(projectBlurb);
-                    //the tech is optional, loop through the logo list to find relevant ones
+                    //looping through the logo list to find relevant ones (tech optional, double-check relative paths when adding)
                     if (project.tech) {
                         const projectTechsContainer = document.createElement("div");
                         projectTechsContainer.className = "project__techs neumorphism-base";
@@ -70,22 +73,25 @@ export function projectsShowcase() {
                         projectItem.appendChild(projectTechsContainer);
                     }
                     //the open button is in the main div
+                    //multiple classes for global styling, specific styling and triggering actions
                     const openButton = document.createElement("button");
                     openButton.classList.add("open-dialog", "project__button", "neumorphism-raised");
                     openButton.setAttribute("data-dialog-target", `project-dialog-${project.id}`);
                     openButton.setAttribute("data-i18n-key", "discover");
                     projectItem.appendChild(openButton);
-                    //the dialog is in the main div and every other element inside it
+                    //modal/dialog building starts here
                     const modal = document.createElement("dialog");
                     modal.id = `project-dialog-${project.id}`;
                     modal.className = "dialog project-dialog";
+                    //modal created in specific div at the bottom of the body before the scripts outside the complex nesting to handle it more easily + styling
                     if (modalDiv) {
-                        //modal created in specific div at the bottom of the body before the scripts outside the complex nesting to handle it more easily + styling
                         modalDiv.appendChild(modal);
                     }
                     //container for the modal content for styling purposes
                     const modalInnerContainer = document.createElement("div");
                     modalInnerContainer.className = "project__modal";
+                    //close button, inside modal
+                    //multiple classes for global styling, specific styling and triggering actions
                     const closeButton = document.createElement("button");
                     closeButton.classList.add("close-dialog", "project__close", "neumorphism-base");
                     closeButton.setAttribute("data-dialog-id", `project-dialog-${project.id}`);
@@ -95,6 +101,7 @@ export function projectsShowcase() {
                     closeButtonIcon.setAttribute("aria-hidden", "true");
                     closeButton.appendChild(closeButtonIcon);
                     modalInnerContainer.appendChild(closeButton);
+                    //creating the cover image inside the modal
                     const projectCover = document.createElement("img");
                     projectCover.className = "project__cover";
                     projectCover.src = project.img;

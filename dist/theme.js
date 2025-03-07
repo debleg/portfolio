@@ -45,13 +45,13 @@ export function themeHandling() {
     //due to visually hidden and tab index -1 the checkbox itself can't be used as target, the label is what the user interacts with instead with a tabindex of 0
     if (label) {
         label.addEventListener("click", toggleTheme);
-        //for keyboard accessibility
+        //for keyboard accessibility (label tabintex allows it to be focusable for this to be usable)
         label.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault(); //no scroll on space bar press
                 toggleTheme();
             }
-        }); // <-- Add this closing parenthesis
+        });
     }
 }
 //# sourceMappingURL=theme.js.map

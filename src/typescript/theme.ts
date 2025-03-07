@@ -54,12 +54,12 @@ export function themeHandling() {
   if (label) {
     label.addEventListener("click", toggleTheme);
 
-    //for keyboard accessibility
+    //for keyboard accessibility (label tabintex allows it to be focusable for this to be usable)
     label.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault(); //no scroll on space bar press
         toggleTheme();
       }
-    }); // <-- Add this closing parenthesis
+    });
   }
 }

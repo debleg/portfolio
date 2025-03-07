@@ -5,7 +5,7 @@ import { techSkillsShowcase } from "./techskills.js";
 import { projectsShowcase } from "./projects.js";
 import { unfoldSection } from "./unfoldAnimation.js";
 
-//only initialize the theme and i18n when the DOM is ready
+//some functions need to wait for the full Dom content to be loaded to work properly, made async to handle promises
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     themeHandling();
@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 techSkillsShowcase();
 
-//back to top logic
+//back to top logic, no need for a file of its own at this level of complexity
+//button is hard-coded in html and styled with classes
 
 const scrollToTop = document.getElementById("scrollToTop") as HTMLButtonElement;
 
