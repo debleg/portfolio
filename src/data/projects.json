@@ -4,7 +4,7 @@
     "name": "ohmyfood",
     "blurb": "oh-blurb",
     "tech": ["sass", "git"],
-    "img": "./src/projects/ohmy-headerview.png",
+    "img": "./src/projects/ohmy-headerview.webp",
     "description": "oh-desc",
     "repo": "https://github.com/debleg/OC-P4-Ohmyfood",
     "website": "https://debleg.github.io/OC-P4-Ohmyfood/"
@@ -14,7 +14,7 @@
     "name": "Sophie Bluel",
     "blurb": "soph-blurb",
     "tech": ["javascript", "figma"],
-    "img": "./src/projects/sophie-interface.png",
+    "img": "./src/projects/sophie-interface.webp",
     "description": "soph-desc",
     "repo": "https://github.com/debleg/OC-P6-Sophie-Bluel"
   },
@@ -23,7 +23,7 @@
     "name": "Kasa",
     "blurb": "kasa-blurb",
     "tech": ["react", "sass", "figma"],
-    "img": "./src/projects/kasa-illustration.png",
+    "img": "./src/projects/kasa-illustration.webp",
     "description": "kasa-desc",
     "repo": "https://github.com/debleg/OC-P7-Kasa"
   },
@@ -32,7 +32,7 @@
     "name": "Nina Carducci",
     "blurb": "nina-blurb",
     "tech": ["lighthouse"],
-    "img": "./src/projects/nina-lighthouse.png",
+    "img": "./src/projects/nina-lighthouse.webp",
     "description": "nina-desc",
     "repo": "https://github.com/debleg/OC-P8-Nina-Carducci",
     "website": "https://debleg.github.io/OC-P8-Nina-Carducci/"
@@ -42,7 +42,7 @@
     "name": "Portfolio",
     "blurb": "pf-blurb",
     "tech": ["typescript", "sass"],
-    "img": "./src/projects/portfolio-headerview.png",
+    "img": "./src/projects/portfolio-headerview.webp",
     "description": "pf-desc",
     "repo": "https://github.com/debleg/portfolio",
     "website": "https://debleg.github.io/portfolio/"
